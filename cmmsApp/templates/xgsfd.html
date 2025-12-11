@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SCADA – Supervisory Control and Data Acquisition | iEngineering</title>
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-specific CSS (ONLY for this SCADA page) -->
+  <link rel="stylesheet" href="{% static 'css/scada.css' %}?v=1">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main class="scada-page">
+
+    <!-- ==================== HERO ==================== -->
+    <header class="scada-hero">
+      <div class="scada-hero__bg"
+           style="--hero:url({% static 'images/scada/scada-hero.jpg' %})"></div>
+
+      <div class="wrap scada-hero__inner">
+        <div class="scada-hero__grid">
+
+          <div class="scada-hero__copy">
+            <p class="scada-eyebrow">SCADA – Supervisory Control and Data Acquisition</p>
+            <h1>SCADA platforms for real-time visibility and control.</h1>
+            <p class="scada-lead">
+              iEngineering provides complete Industrial Automation services for SCADA systems –
+              including testing, supply, installation &amp; commissioning for Siemens, Schneider
+              Electric and Allen-Bradley / WinTr platforms.
+            </p>
+            <div class="scada-hero__cta">
+              <a href="/contact/" class="scada-btn scada-btn--solid">Submit SCADA Inquiry</a>
+              <a href="#platforms" class="scada-btn scada-btn--ghost">View SCADA platforms</a>
+            </div>
+            <div class="scada-hero__tags">
+              <span>Testing</span>
+              <span>Supply</span>
+              <span>Installation</span>
+              <span>Commissioning</span>
+              <span>Alarms &amp; Historian</span>
+            </div>
+          </div>
+
+          <aside class="scada-hero__card" aria-label="SCADA overview">
+            <h2>End-to-end SCADA services</h2>
+            <ul>
+              <li><span class="dot"></span> System specification and architecture design</li>
+              <li><span class="dot"></span> Supply of servers, clients &amp; licences</li>
+              <li><span class="dot"></span> Graphics, alarms, trends &amp; reporting</li>
+              <li><span class="dot"></span> Commissioning, cut-over &amp; training</li>
+            </ul>
+            <div class="scada-hero__meta">
+              <div>
+                <strong>Multi-vendor</strong>
+                <span>Siemens, Schneider, Allen-Bradley / WinTr</span>
+              </div>
+              <div>
+                <strong>Industries</strong>
+                <span>Water, power, oil &amp; gas, manufacturing</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="scada-hero__skew"></div>
+    </header>
+
+    <!-- ==================== INTRO ==================== -->
+    <section class="scada-section scada-intro">
+      <div class="wrap scada-intro__grid">
+        <div>
+          <h2 class="scada-section__title">SCADA for networked infrastructure and plants</h2>
+          <p class="scada-section__subtitle">
+            A Supervisory Control and Data Acquisition (SCADA) system monitors field devices,
+            collects data and provides operators with secure, real-time control over critical
+            assets – locally and remotely.
+          </p>
+          <ul class="scada-list">
+            <li>New SCADA projects, upgrades and migrations</li>
+            <li>Single-site and multi-site enterprise architectures</li>
+            <li>Integration with PLCs, RTUs, telemetry and historians</li>
+          </ul>
+        </div>
+        <div class="scada-why">
+          <h3>Where SCADA is typically used</h3>
+          <ul class="scada-list scada-list--tight">
+            <li>Water &amp; wastewater networks</li>
+            <li>Power generation &amp; distribution</li>
+            <li>Oil &amp; gas pipelines and terminals</li>
+            <li>Industrial plants and manufacturing lines</li>
+            <li>Remote assets with telemetry and wireless links</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
+    <section class="scada-strip">
+      <div class="wrap scada-strip__grid">
+        <div class="scada-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Siemens</h3>
+            <p>SIMATIC WinCC Professional SCADA solutions.</p>
+          </div>
+        </div>
+        <div class="scada-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Schneider Electric</h3>
+            <p>Clear SCADA &amp; Citect SCADA platforms.</p>
+          </div>
+        </div>
+        <div class="scada-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Allen-Bradley / WinTr</h3>
+            <p>WinTr SCADA systems with AB integration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SCADA PLATFORMS (BIG CARDS) ==================== -->
+    <section id="platforms" class="scada-section scada-platforms">
+      <div class="wrap">
+        <header class="scada-platforms__head">
+          <h2 class="scada-section__title">SCADA platforms we supply &amp; integrate</h2>
+          <p class="scada-section__subtitle">
+            Only a few key platforms are usually required – so we focus on the main systems used
+            across utilities and industry, and engineer them for reliability, performance and
+            ease of use.
+          </p>
+        </header>
+
+        <div class="scada-platforms__grid">
+
+          <!-- 1. Siemens WinCC -->
+          <article class="scada-card">
+            <figure class="scada-card__image">
+              <!-- 🔁 replace with your real image path -->
+              <img src="{% static 'images/scada/wincc.jpg' %}"
+                   alt="Siemens SIMATIC WinCC Professional SCADA">
+            </figure>
+            <div class="scada-card__body">
+              <div class="scada-card__tag">Siemens – SIMATIC WinCC Professional</div>
+              <h3>WinCC Professional (TIA Portal)</h3>
+              <p>
+                PC-based Siemens SCADA solution integrated into the TIA Portal for operator
+                control and monitoring of processes – from single stations to distributed,
+                multi-user systems.
+              </p>
+              <ul class="scada-card__list">
+                <li>Seamless integration with SIMATIC PLCs and TIA Portal projects</li>
+                <li>Scalable from standalone HMI to plant-wide SCADA</li>
+                <li>Supports web clients and distributed architectures</li>
+                <li>Expandable with WinCC RT Professional options and add-ons</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 2. Schneider Clear SCADA -->
+          <article class="scada-card">
+            <figure class="scada-card__image">
+              <img src="{% static 'images/scada/clear-scada.jpg' %}"
+                   alt="Schneider Electric Clear SCADA platform">
+            </figure>
+            <div class="scada-card__body">
+              <div class="scada-card__tag">Schneider Electric – Clear SCADA</div>
+              <h3>Clear SCADA</h3>
+              <p>
+                Enterprise-grade SCADA designed for telemetry applications, especially in
+                the water industry, with efficient communication over low and high bandwidth links.
+              </p>
+              <ul class="scada-card__list">
+                <li>Real-time database and integrated polling engine</li>
+                <li>Single or redundant servers collecting historical field data</li>
+                <li>Optimised for radio, cellular and long-distance links</li>
+                <li>Integrated clients and third-party data access options</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 3. Schneider Citect SCADA -->
+          <article class="scada-card">
+            <figure class="scada-card__image">
+              <img src="{% static 'images/scada/citect.jpg' %}"
+                   alt="Schneider Electric Citect SCADA software">
+            </figure>
+            <div class="scada-card__body">
+              <div class="scada-card__tag">Schneider Electric – Citect SCADA</div>
+              <h3>Citect SCADA</h3>
+              <p>
+                High-performance SCADA platform tailored for demanding industrial processes,
+                with flexible configuration and strong visualisation tools.
+              </p>
+              <ul class="scada-card__list">
+                <li>Suitable for water, F&amp;B, mining, manufacturing and infrastructure</li>
+                <li>Rich graphics, alarming, trending and reporting</li>
+                <li>Highly customisable for different industry requirements</li>
+                <li>Supports large, distributed systems and enterprise integration</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. WinTr SCADA -->
+          <article class="scada-card">
+            <figure class="scada-card__image">
+              <img src="{% static 'images/scada/wintr.jpg' %}"
+                   alt="WinTr SCADA system">
+            </figure>
+            <div class="scada-card__body">
+              <div class="scada-card__tag">WinTr – SCADA for Allen-Bradley &amp; others</div>
+              <h3>WinTr SCADA systems</h3>
+              <p>
+                Flexible SCADA software for monitoring and archiving data from wide-area
+                manufacturing operations with strong alarm and reporting features.
+              </p>
+              <ul class="scada-card__list">
+                <li>Alarms and warnings for process values with e-mail / SMS notification</li>
+                <li>Fast report generation from historical data (Excel &amp; PDF)</li>
+                <li>Recipe management for sending saved tag sets to devices</li>
+                <li>Web and remote access for monitoring multiple stations</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="scada-cta">
+      <div class="wrap scada-cta__wrap">
+        <h2>Need help choosing the right SCADA platform?</h2>
+        <p>
+          Share your existing PLC/RTU fleet, number of sites and communication links.
+          We’ll propose a practical SCADA shortlist and migration or new-build plan.
+        </p>
+        <div class="scada-cta__buttons">
+          <a href="/contact/" class="scada-btn scada-btn--solid">Submit SCADA Inquiry</a>
+          <a href="/control/" class="scada-btn scada-btn--ghost">Back to Controls &amp; Automation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

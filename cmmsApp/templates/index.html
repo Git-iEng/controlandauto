@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Control & Automation | iEngineering</title>
+
+  <!-- Shared Assets -->
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-specific stylesheet (ONLY for this page) -->
+  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}?v=3">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <!-- ================= MAIN WRAPPER (adds top padding like other pages) ================= -->
+  <main class="ctrl-page">
+
+    <!-- ============ HERO ============ -->
+    <header class="ctrl-hero">
+      <div class="ctrl-hero__bg" style="--hero:url({% static 'images/controls/hero-plc.jpg' %})"></div>
+
+      <div class="wrap ctrl-hero__inner">
+        <div class="ctrl-hero__grid">
+          <!-- Left: copy -->
+          <div class="ctrl-hero__copy">
+            <p class="ctrl-eyebrow">Control &amp; Automation Products</p>
+            <h1>PLC, HMI, SCADA, DCS, VSD &amp; IoT – from trusted global brands.</h1>
+            <p class="ctrl-lead">
+              iEngineering delivers control and automation solutions using leading brands such as Siemens,
+              Allen-Bradley, ABB, Schneider Electric, Rockwell, Honeywell and Yokogawa – tailored to your
+              machinery, processes and infrastructure.
+            </p>
+            <div class="ctrl-hero__cta">
+              <a href="/contact/" class="ctrl-btn ctrl-btn--solid">Request a Quote</a>
+              <a href="#capabilities" class="ctrl-btn ctrl-btn--ghost">View Products</a>
+            </div>
+
+            <div class="ctrl-hero__tags">
+              <span>PLC</span>
+              <span>HMI</span>
+              <span>SCADA</span>
+              <span>DCS</span>
+              <span>VSD</span>
+              <span>IoT Modules</span>
+            </div>
+          </div>
+
+          <!-- Right: card -->
+          <aside class="ctrl-hero__card" aria-label="Control & Automation snapshot">
+            <h2>Where our solutions are used</h2>
+            <ul>
+              <li><span class="dot"></span> Manufacturing &amp; packaging lines</li>
+              <li><span class="dot"></span> Water, wastewater &amp; utilities</li>
+              <li><span class="dot"></span> Energy, resources &amp; infrastructure</li>
+              <li><span class="dot"></span> Industrial plants and process facilities</li>
+            </ul>
+            <div class="ctrl-hero__meta">
+              <div>
+                <strong>250+</strong>
+                <span>Panels &amp; systems delivered</span>
+              </div>
+              <div>
+                <strong>15+</strong>
+                <span>Industries supported</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <div class="ctrl-hero__skew"></div>
+    </header>
+
+    <!-- ============ MAIN PRODUCT GRID (ALL SEPARATE) ============ -->
+    <section id="capabilities" class="ctrl-section ctrl-capabilities">
+      <div class="wrap">
+        <header class="ctrl-section__head ctrl-section__head--center">
+          <h2 class="ctrl-section__title">Our Control &amp; Automation Products</h2>
+          <p class="ctrl-section__subtitle">
+            Each product category is kept clearly separate – so you can select exactly what you need:
+            PLC, HMI, SCADA, DCS, Variable Speed Drives and IoT modules.
+          </p>
+        </header>
+
+        <div class="ctrl-capabilities__grid">
+          <!-- 1. PLC -->
+          <article class="ctrl-cap-card">
+            <div class="ctrl-cap-card__icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3>Programmable Logic Controller (PLC)</h3>
+            <p>
+              We deliver tailored PLC solutions featuring advanced automation for machinery, processes
+              and equipment. Our offerings include leading brands like Siemens, Allen-Bradley, ABB and
+              Schneider Electric, ensuring efficiency and reliability across manufacturing, energy and
+              infrastructure sectors.
+            </p>
+          </article>
+
+          <!-- 2. HMI -->
+          <article class="ctrl-cap-card">
+            <div class="ctrl-cap-card__icon">
+              <i class="fa-regular fa-display"></i>
+            </div>
+            <h3>Human Machine Interface (HMI)</h3>
+            <p>
+              iEngineering provides advanced HMI solutions from Siemens, Allen-Bradley, ABB and
+              Schneider Electric. Our customizable systems offer clear operator interaction, efficient
+              process control and reliable performance across diverse industrial automation applications.
+            </p>
+          </article>
+
+          <!-- 3. SCADA -->
+          <article class="ctrl-cap-card">
+            <div class="ctrl-cap-card__icon">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <h3>Supervisory Control and Data Acquisition (SCADA)</h3>
+            <p>
+              We offer state-of-the-art SCADA solutions featuring brands such as Siemens, Allen-Bradley,
+              ABB and Schneider Electric. These systems provide centralized monitoring, real-time data
+              acquisition and improved decision-making to enhance operational efficiency.
+            </p>
+          </article>
+
+          <!-- 4. DCS -->
+          <article class="ctrl-cap-card">
+            <div class="ctrl-cap-card__icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Distributed Control Systems (DCS)</h3>
+            <p>
+              Our DCS solutions leverage platforms from Rockwell, Honeywell, Yokogawa and Siemens.
+              We integrate centralized control, real-time monitoring and automation to optimize industrial
+              processes, ensuring efficiency, reliability and scalability.
+            </p>
+          </article>
+
+          <!-- 5. VSD -->
+          <article class="ctrl-cap-card">
+            <div class="ctrl-cap-card__icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3>Variable Speed Drives (VSD)</h3>
+            <p>
+              iEngineering supplies Variable Speed Drives for precise motor speed control and improved
+              energy efficiency. Working with Siemens, Allen-Bradley, ABB and Schneider Electric, we help
+              optimize performance across different industrial applications.
+            </p>
+          </article>
+
+          <!-- 6. IoT Modules -->
+          <article class="ctrl-cap-card">
+            <div class="ctrl-cap-card__icon">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h3>Internet of Things (IoT) Modules</h3>
+            <p>
+              We offer IoT modules and gateways from Siemens, Schneider and ABB that enable seamless
+              integration of devices and systems. Our solutions support advanced connectivity, real-time
+              data analytics and smarter industrial automation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARCHITECTURE / HOW IT FITS TOGETHER ============ -->
+    <section class="ctrl-section ctrl-arch">
+      <div class="wrap ctrl-arch__grid">
+        <div class="ctrl-arch__copy">
+          <h2 class="ctrl-section__title">From field signals to control room</h2>
+          <p>
+            PLCs, HMIs, SCADA, DCS, drives and IoT modules are engineered to work together as one
+            architecture – instead of isolated pieces – improving maintainability and future expansion.
+          </p>
+          <ul class="ctrl-list">
+            <li>Clear demarcation between field devices, control panels and SCADA/DCS</li>
+            <li>Network design aligned with OT/IT requirements</li>
+            <li>Documentation that supports operations, maintenance and audits</li>
+          </ul>
+        </div>
+        <figure class="ctrl-arch__media" aria-hidden="true">
+          <img src="{% static 'images/controls/panels.jpg' %}" alt="Control and automation panel layout">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ DELIVERY TIMELINE ============ -->
+    <section class="ctrl-section ctrl-timeline">
+      <div class="wrap">
+        <header class="ctrl-section__head ctrl-section__head--center">
+          <h2 class="ctrl-section__title">How we deliver your system</h2>
+          <p class="ctrl-section__subtitle">
+            A structured workflow from initial enquiry through detailed design, supply, testing
+            and hand-over.
+          </p>
+        </header>
+
+        <ol class="ctrl-timeline__rail">
+          <li class="ctrl-tl-step">
+            <span class="ctrl-tl-dot"></span>
+            <h3>1. Enquiry &amp; scope</h3>
+            <p>Review of application, I/O list, process requirements, preferred brands and standards.</p>
+          </li>
+          <li class="ctrl-tl-step">
+            <span class="ctrl-tl-dot"></span>
+            <h3>2. Proposal &amp; design</h3>
+            <p>Selection of PLC/HMI/SCADA/DCS/VSD/IoT hardware, architecture and deliverable list.</p>
+          </li>
+          <li class="ctrl-tl-step">
+            <span class="ctrl-tl-dot"></span>
+            <h3>3. Supply &amp; build</h3>
+            <p>Procurement, panel build (where applicable), configuration and factory acceptance tests.</p>
+          </li>
+          <li class="ctrl-tl-step">
+            <span class="ctrl-tl-dot"></span>
+            <h3>4. Integration &amp; support</h3>
+            <p>Site integration support, documentation hand-over and ongoing service options.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ STATS STRIP ============ -->
+    <section class="ctrl-stats">
+      <div class="wrap ctrl-stats__grid">
+        <div class="ctrl-stat">
+          <span class="ctrl-stat__num">250+</span>
+          <span class="ctrl-stat__label">Control &amp; automation systems supplied</span>
+        </div>
+        <div class="ctrl-stat">
+          <span class="ctrl-stat__num">15+</span>
+          <span class="ctrl-stat__label">Industry sectors served</span>
+        </div>
+        <div class="ctrl-stat">
+          <span class="ctrl-stat__num">24/7</span>
+          <span class="ctrl-stat__label">Support options available</span>
+        </div>
+        <div class="ctrl-stat">
+          <span class="ctrl-stat__num">Global</span>
+          <span class="ctrl-stat__label">Brand ecosystem: Siemens, ABB, Rockwell &amp; more</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="ctrl-section ctrl-testimonials">
+      <div class="wrap">
+        <header class="ctrl-section__head ctrl-section__head--center">
+          <h2 class="ctrl-section__title">What our clients say</h2>
+        </header>
+
+        <div class="ctrl-testi__grid">
+          <article class="ctrl-testi">
+            <p>“The PLC and HMI solution from iEngineering integrated smoothly into our existing plant.”</p>
+            <div class="ctrl-testi__by">Production Manager</div>
+          </article>
+          <article class="ctrl-testi">
+            <p>“Their SCADA upgrade improved visibility and reduced response time to process issues.”</p>
+            <div class="ctrl-testi__by">Utilities Superintendent</div>
+          </article>
+          <article class="ctrl-testi">
+            <p>“The combination of drives and IoT monitoring helped us cut energy usage and downtime.”</p>
+            <div class="ctrl-testi__by">Maintenance Lead</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOGOS ============ -->
+    <section class="ctrl-logos">
+      <div class="wrap ctrl-logos__row">
+        <img src="{% static 'images/controls/logos/ab.png' %}" alt="Allen-Bradley">
+        <img src="{% static 'images/controls/logos/siemens.png' %}" alt="Siemens">
+        <img src="{% static 'images/controls/logos/abb.png' %}" alt="ABB">
+        <img src="{% static 'images/controls/logos/ignition.png' %}" alt="Ignition">
+        <img src="{% static 'images/controls/logos/opc.png' %}" alt="OPC UA">
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="ctrl-cta">
+      <div class="wrap ctrl-cta__wrap">
+        <h2>Need PLC, HMI, SCADA, DCS, VSD or IoT hardware?</h2>
+        <p>Share your requirement or bill of materials and we’ll respond with a brand-aligned, practical supply proposal.</p>
+        <div class="ctrl-cta__buttons">
+          <a href="/contact/" class="ctrl-btn ctrl-btn--solid">Request a Quote</a>
+          <a href="/services/" class="ctrl-btn ctrl-btn--ghost">Explore Other Services</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

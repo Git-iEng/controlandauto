@@ -1,0 +1,552 @@
+/* =====================================
+   PLC Page – Programmable Logic Controller
+   Prefix: .plc-
+   ===================================== */
+
+:root {
+  --plc-ink: #0f172a;
+  --plc-muted: #6b7280;
+  --plc-bg-page: #f3f4f6;
+  --plc-soft: #f9fafb;
+  --plc-border: rgba(15, 23, 42, 0.08);
+  --plc-primary: #0f766e;
+  --plc-primary-2: #155e75;
+  --plc-accent: #0ea5e9;
+  --plc-radius-lg: 18px;
+  --plc-radius-md: 14px;
+  --plc-shadow-card: 0 18px 40px rgba(15, 23, 42, 0.16);
+  --plc-shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.1);
+  --plc-section-y: clamp(32px, 7vw, 64px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--plc-ink);
+  background: var(--plc-bg-page);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 28px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.plc-page {
+  padding-top: clamp(72px, 10vh, 96px); /* protects from sticky header overlap */
+}
+
+/* ---------- Section headers ---------- */
+.plc-section {
+  padding: var(--plc-section-y) 0;
+}
+
+.plc-section__title {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #0b3b3f;
+}
+
+.plc-section__subtitle {
+  margin: 0;
+  color: var(--plc-muted);
+  font-size: 0.96rem;
+}
+
+/* ---------- Buttons ---------- */
+.plc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.plc-btn--solid {
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    var(--plc-primary),
+    var(--plc-primary-2)
+  );
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.34);
+}
+
+.plc-btn--solid:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.4);
+}
+
+.plc-btn--ghost {
+  color: var(--plc-primary-2);
+  background: linear-gradient(180deg, #ffffff, #f4f5fb);
+  border-color: rgba(21, 94, 117, 0.4);
+}
+
+.plc-btn--ghost:hover {
+  transform: translateY(-1.5px);
+  border-color: var(--plc-primary-2);
+}
+
+/* =====================================
+   HERO
+   ===================================== */
+
+.plc-hero {
+  position: relative;
+  color: #f9fafb;
+  background: #020617;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.plc-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.15) 0, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(45, 212, 191, 0.25) 0, transparent 55%),
+    linear-gradient(130deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7)),
+    var(--hero) center/cover no-repeat;
+  opacity: 0.96;
+}
+
+.plc-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(40px, 9vw, 80px);
+  padding-bottom: clamp(70px, 11vw, 110px);
+}
+
+.plc-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 48px);
+  align-items: center;
+}
+
+/* Eyebrow */
+.plc-eyebrow {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: #a5f3fc;
+}
+
+.plc-eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #67e8f9, var(--plc-accent));
+}
+
+.plc-hero__copy h1 {
+  margin: 0.65rem 0 0.7rem;
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.06;
+}
+
+.plc-lead {
+  margin: 0 0 1.4rem;
+  max-width: 60ch;
+  color: rgba(241, 245, 249, 0.95);
+  font-size: clamp(0.98rem, 1.05vw, 1.05rem);
+}
+
+.plc-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.plc-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.plc-hero__tags span {
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+/* Hero side card */
+.plc-hero__card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.86));
+  border-radius: 22px;
+  padding: 1.4rem 1.5rem 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  box-shadow: var(--plc-shadow-card);
+}
+
+.plc-hero__card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.plc-hero__card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.plc-hero__card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0.2rem 0;
+}
+
+.plc-hero__card .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-top: 0.4rem;
+  background: linear-gradient(135deg, #22c55e, #a3e635);
+}
+
+.plc-hero__meta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding-top: 0.7rem;
+}
+
+.plc-hero__meta div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.plc-hero__meta strong {
+  font-size: 1rem;
+}
+
+.plc-hero__meta span {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+}
+
+/* Skew */
+.plc-hero__skew {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9vw;
+  height: 13vw;
+  background: var(--plc-bg-page);
+  transform: skewY(-6deg);
+  transform-origin: 100% 0;
+}
+
+/* Hero responsive */
+@media (max-width: 960px) {
+  .plc-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plc-hero__card {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .plc-hero__inner {
+    padding-top: 56px;
+    padding-bottom: 70px;
+  }
+
+  .plc-hero__cta {
+    flex-direction: column;
+  }
+
+  .plc-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =====================================
+   INTRO / STANDARDS
+   ===================================== */
+
+.plc-intro {
+  background: #ffffff;
+  border-top: 1px solid var(--plc-border);
+  border-bottom: 1px solid var(--plc-border);
+}
+
+.plc-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(18px, 3.5vw, 40px);
+  align-items: flex-start;
+}
+
+.plc-list {
+  margin: 0.6rem 0 0;
+  padding-left: 18px;
+  font-size: 0.94rem;
+  color: #111827;
+}
+
+.plc-list--tight li {
+  margin: 0.1rem 0;
+}
+
+.plc-standards {
+  background: var(--plc-soft);
+  border-radius: var(--plc-radius-md);
+  padding: 1rem;
+  border: 1px solid var(--plc-border);
+  font-size: 0.93rem;
+}
+
+.plc-standards h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b3b3f;
+}
+
+.plc-standards p {
+  margin: 0 0 0.4rem;
+  color: var(--plc-muted);
+}
+
+/* Intro responsive */
+@media (max-width: 880px) {
+  .plc-intro__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* =====================================
+   BRAND STRIP
+   ===================================== */
+
+.plc-brand-strip {
+  background: var(--plc-bg-page);
+  padding: clamp(20px, 4vw, 30px) 0;
+}
+
+.plc-brand-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.plc-brand-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  border-radius: 999px;
+  border: 1px solid var(--plc-border);
+  padding: 8px 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+}
+
+.plc-brand-pill i {
+  color: var(--plc-primary-2);
+}
+
+/* Brand strip responsive */
+@media (max-width: 880px) {
+  .plc-brand-strip__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .plc-brand-strip__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* =====================================
+   BRAND BLOCKS + PRODUCT CARDS
+   ===================================== */
+
+.plc-brand-block {
+  background: transparent;
+}
+
+.plc-brand-head {
+  margin-bottom: 1.2rem;
+}
+
+.plc-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2.4vw, 22px);
+}
+
+.plc-product-card {
+  background: #ffffff;
+  border-radius: var(--plc-radius-lg);
+  border: 1px solid var(--plc-border);
+  box-shadow: var(--plc-shadow-soft);
+  padding: 0.9rem 0.9rem 1rem;
+  font-size: 0.93rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.plc-product-card__image {
+  border-radius: var(--plc-radius-md);
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+
+.plc-product-card h3 {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: #0b3b3f;
+}
+
+.plc-product-card p {
+  margin: 0;
+  color: var(--plc-muted);
+}
+
+/* Brand-specific subtle tints (optional) */
+.plc-brand--siemens .plc-product-card__image {
+  background: linear-gradient(135deg, #e0f2fe, #eff6ff);
+}
+
+.plc-brand--ab .plc-product-card__image {
+  background: linear-gradient(135deg, #fee2e2, #fef2f2);
+}
+
+.plc-brand--abb .plc-product-card__image {
+  background: linear-gradient(135deg, #fee2e2, #ffe4e6);
+}
+
+.plc-brand--se .plc-product-card__image {
+  background: linear-gradient(135deg, #ecfdf5, #e0f2fe);
+}
+
+/* Products responsive */
+@media (max-width: 1080px) {
+  .plc-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .plc-products-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Download block inside Schneider section */
+.plc-download {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.94rem;
+}
+
+.plc-download p {
+  margin: 0;
+  color: var(--plc-muted);
+}
+
+/* =====================================
+   CTA
+   ===================================== */
+
+.plc-cta {
+  background: linear-gradient(180deg, #f9fafb, #e5edf5);
+  border-top: 1px solid var(--plc-border);
+  padding: var(--plc-section-y) 0;
+}
+
+.plc-cta__wrap {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.7rem;
+}
+
+.plc-cta__wrap h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+}
+
+.plc-cta__wrap p {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--plc-muted);
+  font-size: 0.96rem;
+}
+
+.plc-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 640px) {
+  .plc-cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .plc-cta__buttons .plc-btn {
+    width: 100%;
+  }
+}

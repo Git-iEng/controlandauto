@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Control & Automation – Services</title>
+
+  <!-- Shared -->
+  <link rel="stylesheet" href="{% static 'css/consult-block.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <!-- HERO / BANNER -->
+  <section class="neplan-electricity-slide" aria-label="Control & Automation services hero">
+    <div class="nes-viewport">
+      <header class="nsv-hero">
+        <p class="nsv-kicker">Control &amp; Automation</p>
+        <h1 class="nsv-title">Complete PLC, SCADA, DCS, VSD &amp; IoT solutions</h1>
+        <p class="nsv-sub">
+          iEngineering delivers end-to-end industrial automation services – from PLC and HMI programming
+          to SCADA, DCS, Variable Speed Drives and IoT connectivity. We support leading brands across
+          water, power, manufacturing, mining and infrastructure projects.
+        </p>
+        <div class="cta-buttons">
+          <a href="/contact/" class="btn btn-primary">Discuss Your Automation Scope</a>
+          <a href="/control/" class="btn btn-secondary">View All Control Products</a>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- PAGE CONTENT -->
+  <main class="neplan-services">
+
+    <!-- INTRO -->
+    <section class="svc-intro" data-reveal="up">
+      <div class="svc-intro__inner">
+        <h2>From panels to plant-wide automation</h2>
+        <p>
+          We help clients specify, engineer and commission control systems that are reliable, maintainable
+          and easy to operate. Our team can support you at any point in the lifecycle – from new projects
+          and brownfield upgrades to troubleshooting and optimisation of existing assets.
+        </p>
+        <ul class="svc-intro__list">
+          <li>Vendor-neutral advice with strong Siemens, Allen-Bradley, ABB and Schneider experience.</li>
+          <li>Support for utilities, industry, OEMs and EPCs across Australia, Pacific and Asia.</li>
+          <li>Flexible engagement – from small control panels to full plant automation packages.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CORE SERVICES GRID -->
+    <section class="svc-grid" aria-label="Core control & automation services">
+
+      <!-- PLC -->
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-card__icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <p class="svc-card__kicker">PLC – Programmable Logic Controller</p>
+        <h3>Logic control for machines and processes</h3>
+        <p class="svc-card__text">
+          Design, programming and commissioning of PLC systems for machinery, skids and process units.
+          We follow structured coding standards so your team can maintain and extend the system over time.
+        </p>
+        <ul class="svc-card__list">
+          <li>Siemens, Allen-Bradley, ABB and Schneider PLC platforms.</li>
+          <li>New builds, retrofits, I/O expansions and panel upgrades.</li>
+          <li>FAT, SAT and support during start-up and optimisation.</li>
+        </ul>
+        <a href="/plc-programmable-logic-controller/" class="svc-card__link">
+          View PLC services
+        </a>
+      </article>
+
+      <!-- HMI -->
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-card__icon">
+          <i class="fa-solid fa-display"></i>
+        </div>
+        <p class="svc-card__kicker">HMI – Human Machine Interface</p>
+        <h3>Operator visualisation &amp; control</h3>
+        <p class="svc-card__text">
+          Development of clean, standards-aligned HMI screens that give operators clear situational
+          awareness, diagnostics and control without clutter.
+        </p>
+        <ul class="svc-card__list">
+          <li>Screen layouts, navigation, trends and alarm pop-ups.</li>
+          <li>Faceplates, templates and standard graphics libraries.</li>
+          <li>Role-based access and language/localisation options.</li>
+        </ul>
+        <a href="/human-machine-interface/" class="svc-card__link">
+          View HMI services
+        </a>
+      </article>
+
+      <!-- SCADA -->
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-card__icon">
+          <i class="fa-solid fa-diagram-project"></i>
+        </div>
+        <p class="svc-card__kicker">SCADA – Supervisory Control</p>
+        <h3>Plant &amp; network-wide supervision</h3>
+        <p class="svc-card__text">
+          SCADA engineering for treatment plants, power systems, industrial sites and networks – from
+          architecture and networking to tag databases, trends and reporting.
+        </p>
+        <ul class="svc-card__list">
+          <li>Server/client architecture, redundancy and security.</li>
+          <li>KPIs, trends, event &amp; alarm management and reporting.</li>
+          <li>Integration with PLCs, RTUs and telemetry systems.</li>
+        </ul>
+        <a href="/scada-supervisory-control-and-data-acquistion/" class="svc-card__link">
+          View SCADA services
+        </a>
+      </article>
+
+      <!-- DCS -->
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-card__icon">
+          <i class="fa-solid fa-network-wired"></i>
+        </div>
+        <p class="svc-card__kicker">DCS – Distributed Control System</p>
+        <h3>Process &amp; batch plant control</h3>
+        <p class="svc-card__text">
+          Design and migration of DCS solutions for continuous and batch processes, covering architecture,
+          control strategies, alarms and long-term maintainability.
+        </p>
+        <ul class="svc-card__list">
+          <li>System architecture, I/O design and network topology.</li>
+          <li>Legacy DCS migrations with phased cut-over strategies.</li>
+          <li>Alarm management, batch configuration and reporting.</li>
+        </ul>
+        <a href="/dcs-distributed-control-system/" class="svc-card__link">
+          View DCS services
+        </a>
+      </article>
+
+      <!-- VSD (separate card) -->
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-card__icon">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <p class="svc-card__kicker">VSD – Variable Speed Drives</p>
+        <h3>Energy-efficient motor control</h3>
+        <p class="svc-card__text">
+          Engineering, selection and commissioning of Variable Speed Drives to improve energy efficiency,
+          process control and equipment life for pumps, fans and other rotating loads.
+        </p>
+        <ul class="svc-card__list">
+          <li>Drive sizing, selection and parameter configuration.</li>
+          <li>Integration with existing PLC, SCADA and safety systems.</li>
+          <li>On-site commissioning, tuning and fault diagnostics.</li>
+        </ul>
+        <a href="/vsd-variable-sequence-drives/" class="svc-card__link">
+          View VSD services
+        </a>
+      </article>
+
+      <!-- IoT (separate card) -->
+      <article class="svc-card" data-reveal="up">
+        <div class="svc-card__icon">
+          <i class="fa-solid fa-wifi"></i>
+        </div>
+        <p class="svc-card__kicker">IoT – Internet of Things Modules</p>
+        <h3>Connected assets &amp; remote insights</h3>
+        <p class="svc-card__text">
+          IoT gateways and edge modules that bring real-time data from field equipment into dashboards,
+          analytics platforms and maintenance systems.
+        </p>
+        <ul class="svc-card__list">
+          <li>Selection and deployment of IoT gateways and sensors.</li>
+          <li>Connectivity via cellular, Ethernet or industrial protocols.</li>
+          <li>Integration with existing SCADA, historians or CMMS platforms.</li>
+        </ul>
+        <a href="/internet-of-thingsiot-modules/" class="svc-card__link">
+          View IoT services
+        </a>
+      </article>
+    </section>
+
+    <!-- DELIVERY APPROACH -->
+    <section class="svc-process" data-reveal="up" aria-label="How we deliver automation projects">
+      <div class="svc-process__head">
+        <h2>How we deliver your automation project</h2>
+        <p>
+          A structured, collaborative approach – from early scoping through to training and support –
+          reduces surprises on site and keeps risk under control.
+        </p>
+      </div>
+      <ol class="svc-process__steps">
+        <li class="svc-process__step">
+          <span class="svc-process__badge">1</span>
+          <h3>Discover</h3>
+          <p>Gather P&amp;IDs, single-lines, control narratives, I/O lists and network drawings. Clarify
+            operational constraints and shutdown windows.</p>
+        </li>
+        <li class="svc-process__step">
+          <span class="svc-process__badge">2</span>
+          <h3>Design</h3>
+          <p>Define architecture, select platforms, design panels and control strategies, and agree
+            standards for graphics, naming and alarms.</p>
+        </li>
+        <li class="svc-process__step">
+          <span class="svc-process__badge">3</span>
+          <h3>Build &amp; test</h3>
+          <p>Develop code and graphics, assemble panels, and perform FAT with your team – resolving
+            issues before equipment goes to site.</p>
+        </li>
+        <li class="svc-process__step">
+          <span class="svc-process__badge">4</span>
+          <h3>Commission &amp; support</h3>
+          <p>Site installation, SAT, tuning and handover, followed by training and ongoing support for
+            operations and maintenance teams.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- VENDORS / ECOSYSTEM -->
+    <section class="svc-strip" data-reveal="up">
+      <div class="svc-strip__inner">
+        <h2>Vendor ecosystems we work with</h2>
+        <p>
+          We can align with your preferred vendor strategy or help you select the most practical
+          combination for your project.
+        </p>
+        <div class="svc-pill-row">
+          <span class="svc-pill">Siemens</span>
+          <span class="svc-pill">Allen-Bradley / Rockwell</span>
+          <span class="svc-pill">ABB</span>
+          <span class="svc-pill">Schneider Electric</span>
+          <span class="svc-pill">Honeywell</span>
+          <span class="svc-pill">Yokogawa</span>
+          <span class="svc-pill">Other vendor ecosystems</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="svc-cta" data-reveal="up">
+      <div class="svc-cta__inner">
+        <h2>Planning an upgrade or new control system?</h2>
+        <p>
+          Share your current setup, preferred vendors and project constraints and we’ll outline a
+          practical path forward – from quick wins to full modernisation.
+        </p>
+        <div class="svc-cta__buttons">
+          <a href="/contact/" class="svc-cta__btn svc-cta__btn--solid">
+            Talk to our automation team
+          </a>
+          <a href="/services/" class="svc-cta__btn svc-cta__btn--ghost">
+            View all services
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+
+  <!-- Reveal on scroll -->
+  <script>
+    (function () {
+      const els = document.querySelectorAll('.neplan-services [data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(e => e.classList.add('is-visible'));
+        return;
+      }
+
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: .18 });
+
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VSD</title>
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-specific CSS (ONLY for this VSD page) -->
+  <link rel="stylesheet" href="{% static 'css/nets.css' %}?v=1">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main class="vsd-page">
+
+    <!-- ==================== HERO ==================== -->
+    <header class="vsd-hero">
+      <div class="vsd-hero__bg"
+           style="--hero:url({% static 'images/controls/vsd/vsd-hero.jpg' %})"></div>
+
+      <div class="wrap vsd-hero__inner">
+        <div class="vsd-hero__grid">
+
+          <div class="vsd-hero__copy">
+            <p class="vsd-eyebrow">VSD – Variable Speed Drives</p>
+            <h1>Variable speed drives for efficient, reliable motor control.</h1>
+            <p class="vsd-lead">
+              iEngineering provides complete Industrial Automation services around variable
+              speed drives – from selection and supply through to testing, installation
+              and commissioning of low- and medium-voltage drives. We support Siemens,
+              Allen-Bradley, ABB and Schneider Electric portfolios across a wide range of
+              industrial applications.
+            </p>
+            <div class="vsd-hero__cta">
+              <a href="/contact/" class="vsd-btn vsd-btn--solid">Request VSD Consultation</a>
+              <a href="#platforms" class="vsd-btn vsd-btn--ghost">View VSD platforms</a>
+            </div>
+            <div class="vsd-hero__tags">
+              <span>Energy Savings</span>
+              <span>Soft Starting</span>
+              <span>Process Control</span>
+              <span>LV &amp; MV Drives</span>
+              <span>Retrofit &amp; New Build</span>
+            </div>
+          </div>
+
+          <aside class="vsd-hero__card" aria-label="VSD overview">
+            <h2>Industrial VSD services</h2>
+            <ul>
+              <li><span class="dot"></span> VSD selection based on motor, load &amp; duty cycle</li>
+              <li><span class="dot"></span> Design &amp; engineering of LV and MV drive line-ups</li>
+              <li><span class="dot"></span> Panel integration, field cabling &amp; commissioning</li>
+              <li><span class="dot"></span> Retrofits on existing fixed-speed motors &amp; systems</li>
+            </ul>
+            <div class="vsd-hero__meta">
+              <div>
+                <strong>4+</strong>
+                <span>Global VSD brands supported</span>
+              </div>
+              <div>
+                <strong>End-to-end</strong>
+                <span>From assessment to optimisation</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="vsd-hero__skew"></div>
+    </header>
+
+    <!-- ==================== INTRO ==================== -->
+    <section class="vsd-section vsd-intro">
+      <div class="wrap vsd-intro__grid">
+        <div>
+          <h2 class="vsd-section__title">Why variable speed drives?</h2>
+          <p class="vsd-section__subtitle">
+            Instead of running motors at constant full speed, variable speed drives
+            regulate motor speed and torque. This improves process control, reduces
+            energy consumption and extends equipment life.
+          </p>
+          <ul class="vsd-list">
+            <li>Significant energy savings on pumps, fans, compressors and conveyors</li>
+            <li>Smoother starting and stopping, with reduced mechanical shock and noise</li>
+            <li>Improved control of flow, pressure, level and speed in your process</li>
+          </ul>
+        </div>
+        <div class="vsd-why">
+          <h3>What a good VSD solution should deliver</h3>
+          <ul class="vsd-list vsd-list--tight">
+            <li>Correctly sized drive and enclosure for your motor and environment</li>
+            <li>Compliance with site standards (IEC / NEMA) and utility requirements</li>
+            <li>Harmonic, EMC and motor insulation considerations engineered in</li>
+            <li>Easy integration with PLC, DCS and SCADA systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
+    <section class="vsd-strip">
+      <div class="wrap vsd-strip__grid">
+        <div class="vsd-strip__item">
+          <i class="fa-solid fa-wave-square"></i>
+          <div>
+            <h3>Siemens SINAMICS</h3>
+            <p>G120E, G150, S120 CM and S150 enclosed variable speed drive systems.</p>
+          </div>
+        </div>
+        <div class="vsd-strip__item">
+          <i class="fa-solid fa-plug-circle-bolt"></i>
+          <div>
+            <h3>Allen-Bradley PowerFlex</h3>
+            <p>6000, 7000 and ArcShield arc-resistant medium voltage drives.</p>
+          </div>
+        </div>
+        <div class="vsd-strip__item">
+          <i class="fa-solid fa-industry"></i>
+          <div>
+            <h3>ABB Industrial Drives</h3>
+            <p>ACS800 &amp; ACS880 single drives, modules and liquid-cooled variants.</p>
+          </div>
+        </div>
+        <div class="vsd-strip__item">
+          <i class="fa-solid fa-bolt"></i>
+          <div>
+            <h3>Schneider Altivar</h3>
+            <p>Altivar Process ATV600/900, Altivar 1200 and Altivar 61/71 Plus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VSD PLATFORMS (BIG PRODUCT CARDS) ==================== -->
+    <section id="platforms" class="vsd-section vsd-platforms">
+      <div class="wrap">
+        <header class="vsd-platforms__head">
+          <h2 class="vsd-section__title">VSD platforms we support</h2>
+          <p class="vsd-section__subtitle">
+            We work with leading VSD vendors to engineer, retrofit and support LV and MV
+            drive systems across water, mining, manufacturing, HVAC, oil &amp; gas and
+            other process industries.
+          </p>
+        </header>
+
+        <div class="vsd-platforms__list">
+
+          <!-- ============ SIEMENS SINAMICS ============ -->
+          <article class="vsd-card vsd-card--siemens">
+            <div class="vsd-card__copy">
+              <span class="vsd-card__brand">SIEMENS – SINAMICS</span>
+              <h3>SINAMICS enclosed and modular drives</h3>
+              <p>
+                SINAMICS enclosed drives are based on Siemens’ Totally Integrated
+                Automation concept, combining modular hardware with powerful software
+                tools. We engineer SINAMICS solutions around your load profile, network
+                and enclosure requirements (IEC or NEMA).
+              </p>
+              <ul class="vsd-card__list">
+                <li><strong>SINAMICS G120E</strong> – configurable enclosed LV drives in NEMA 1 or 12</li>
+                <li><strong>SINAMICS G150</strong> – air- or water-cooled enclosed drives (non-regenerative)</li>
+                <li><strong>SINAMICS S120 CM</strong> – common DC bus systems and multi-motor line-ups</li>
+                <li><strong>SINAMICS S150</strong> – regenerative AC/AC drives for high-performance duties</li>
+              </ul>
+            </div>
+            <figure class="vsd-card__media">
+              <img src="{% static 'images/controls/vsd/siemens-sinamics.jpg' %}"
+                   alt="Siemens SINAMICS variable speed drives">
+            </figure>
+          </article>
+
+          <!-- ============ ALLEN-BRADLEY POWERFLEX ============ -->
+          <article class="vsd-card vsd-card--ab">
+            <div class="vsd-card__copy">
+              <span class="vsd-card__brand">ALLEN-BRADLEY – PowerFlex</span>
+              <h3>PowerFlex medium voltage drive systems</h3>
+              <p>
+                Allen-Bradley PowerFlex drives provide flexible, efficient control of
+                medium-voltage motors in critical industrial applications. Systems can be
+                supplied with arc-resistant ArcShield technology and regeneration.
+              </p>
+              <ul class="vsd-card__list">
+                <li><strong>PowerFlex 6000</strong> – MV AC drives for 2.3–11&nbsp;kV fans, pumps &amp; compressors</li>
+                <li><strong>PowerFlex 7000</strong> – air- and liquid-cooled MV drives up to 34,000&nbsp;HP</li>
+                <li><strong>PowerFlex 7000 with ArcShield</strong> – arc-resistant MV drive system with full regeneration</li>
+              </ul>
+            </div>
+            <figure class="vsd-card__media">
+              <img src="{% static 'images/controls/vsd/ab-powerflex.jpg' %}"
+                   alt="Allen-Bradley PowerFlex medium voltage drives">
+            </figure>
+          </article>
+
+          <!-- ============ ABB ACS800 / ACS880 ============ -->
+          <article class="vsd-card vsd-card--abb">
+            <div class="vsd-card__copy">
+              <span class="vsd-card__brand">ABB – ACS800 &amp; ACS880</span>
+              <h3>ABB all-compatible industrial drives</h3>
+              <p>
+                ABB’s ACS800 and ACS880 drives bring safety, reliability and flexibility
+                to process industries and OEM applications. We support complete cabinet
+                systems as well as drive modules for your own panel designs.
+              </p>
+              <ul class="vsd-card__list">
+                <li><strong>ACS800 single drives</strong> – proven wall-mounted and cabinet-built drives</li>
+                <li><strong>ACS880 single drives &amp; drive modules</strong> – all-compatible platform for new systems</li>
+                <li><strong>ACS880 liquid-cooled drives</strong> – direct liquid cooling, 98% heat removal, fully enclosed</li>
+                <li><strong>ACS880 flange-mounted drives</strong> – ACS880-01/-11/-31 and -04F/-04FXT for harsh environments</li>
+              </ul>
+            </div>
+            <figure class="vsd-card__media">
+              <img src="{% static 'images/controls/vsd/abb-acs880.jpg' %}"
+                   alt="ABB ACS800 and ACS880 industrial drives">
+            </figure>
+          </article>
+
+          <!-- ============ SCHNEIDER ALTIVAR ============ -->
+          <article class="vsd-card vsd-card--schneider">
+            <div class="vsd-card__copy">
+              <span class="vsd-card__brand">SCHNEIDER ELECTRIC – Altivar</span>
+              <h3>Altivar Process &amp; medium-voltage Altivar drives</h3>
+              <p>
+                Schneider Electric’s Altivar range is dedicated to process industries and
+                utilities, combining energy-efficient motor control with embedded
+                diagnostics and connectivity for EcoStruxure architectures.
+              </p>
+              <ul class="vsd-card__list">
+                <li><strong>Altivar Process ATV600 series</strong> – VSDs with embedded services from 0.75&nbsp;kW to 1.5&nbsp;MW</li>
+                <li><strong>Altivar Process ATV900 series</strong> – high-performance drives up to 800&nbsp;kW</li>
+                <li><strong>Altivar 1200</strong> – compact MV VSD systems from 315 to 16,200&nbsp;kVA</li>
+                <li><strong>Altivar 71 Plus &amp; 61 Plus</strong> – heavy-duty and variable-torque LV drives up to 800&nbsp;kW</li>
+              </ul>
+            </div>
+            <figure class="vsd-card__media">
+              <img src="{% static 'images/controls/vsd/schneider-altivar.jpg' %}"
+                   alt="Schneider Electric Altivar process and MV drives">
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="vsd-cta">
+      <div class="wrap vsd-cta__wrap">
+        <h2>Plan your next VSD project with iEngineering</h2>
+        <p>
+          Share your motors list, load details, voltage levels and site standards.
+          We will recommend suitable drive brands and models and outline a practical
+          implementation or retrofit plan aligned with your budget and operations.
+        </p>
+        <div class="vsd-cta__buttons">
+          <a href="/contact/" class="vsd-btn vsd-btn--solid">Request VSD Consultation</a>
+          <a href="/control/" class="vsd-btn vsd-btn--ghost">Back to Controls &amp; Automation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

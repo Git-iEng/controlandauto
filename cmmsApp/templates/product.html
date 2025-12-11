@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iEngineering – Control & Automation Products</title>
+
+  <!-- Shared / base styles -->
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+  <link rel="stylesheet" href="{% static 'css/product.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+  <!-- Font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+
+  <!-- HERO / Banner -->
+  <section class="neplan-electricity-slide" aria-label="iEngineering products hero">
+    <div class="nes-viewport">
+      <header class="nsv-hero">
+        <p class="nsv-kicker">Our Products</p>
+        <h1 class="nsv-title">
+          Reliable Control & Automation Solutions<br>
+          for Industrial Applications
+        </h1>
+        <p class="nsv-sub">
+          Explore our suite of products — from PLCs and HMI to complete DCS/SCADA platforms, each tailored
+          for robustness, scalability and efficiency.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="neplan-products-cards" aria-labelledby="products-title">
+    <div class="npc-wrap">
+      <header class="npc-head" data-reveal="up">
+        <h2 id="products-title">Our Control & Automation Products</h2>
+        <p class="npc-sub">Click any card to learn more about that product line.</p>
+      </header>
+
+      <div class="npc-grid">
+
+        <!-- PLC -->
+        <article class="npc-card" data-reveal="up" style="--d:.05s">
+          <div class="npc-card__bg npc-card__bg--plc"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">PLC – Programmable Logic Controller</h3>
+          <p class="npc-card__text">
+            Custom PLC solutions built with leading brands (Siemens, ABB, Schneider, Allen-Bradley),
+            ideal for machine automation and process control.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/plc/">Read More</a>
+          </div>
+        </article>
+
+        <!-- HMI -->
+        <article class="npc-card" data-reveal="up" style="--d:.1s">
+          <div class="npc-card__bg npc-card__bg--hmi"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">HMI – Human Machine Interface</h3>
+          <p class="npc-card__text">
+            Operator-friendly interfaces and dashboards to visualise and control processes, with
+            templates aligned to plant standards.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/hmi/">Read More</a>
+          </div>
+        </article>
+
+        <!-- DCS -->
+        <article class="npc-card" data-reveal="up" style="--d:.15s">
+          <div class="npc-card__bg npc-card__bg--dcs"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2 12h20v10H2z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">DCS – Distributed Control System</h3>
+          <p class="npc-card__text">
+            Full-scale plant automation: redundant controllers, network architecture, batch &amp;
+            sequence control, historian and reporting.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/dcs/">Read More</a>
+          </div>
+        </article>
+
+        <!-- SCADA -->
+        <article class="npc-card" data-reveal="up" style="--d:.2s">
+          <div class="npc-card__bg npc-card__bg--scada"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 5h18v2H3zm0 6h18v2H3zm0 6h18v2H3z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">SCADA &amp; Monitoring</h3>
+          <p class="npc-card__text">
+            Real-time monitoring, telemetry integration, dashboards and reports — ideal for water,
+            power, oil &amp; gas and industrial networks.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/scada/">Read More</a>
+          </div>
+        </article>
+
+        <!-- VSD -->
+        <article class="npc-card" data-reveal="up" style="--d:.25s">
+          <div class="npc-card__bg npc-card__bg--vsd"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 3h10a2 2 0 0 1 2 2v14l-4-2-3 2-3-2-4 2V5a2 2 0 0 1 2-2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="npc-card__title">VSD – Variable Speed Drives</h3>
+          <p class="npc-card__text">
+            Energy-efficient motor control for pumps, fans and conveyors, with tailored drive
+            selection, configuration and integration to your control system.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/vsd/">Read More</a>
+          </div>
+        </article>
+
+        <!-- IoT Modules -->
+        <article class="npc-card" data-reveal="up" style="--d:.3s">
+          <div class="npc-card__bg npc-card__bg--iot"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-6-8a8 8 0 0 1 16 0h-2a6 6 0 0 0-12 0H6zm2 0a6 6 0 0 1 12 0h-2a4 4 0 0 0-8 0H8z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="npc-card__title">IoT – Connected Modules</h3>
+          <p class="npc-card__text">
+            IoT gateways and edge devices bringing real-time field data into dashboards, analytics
+            and maintenance platforms for smarter decisions.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/iot/">Read More</a>
+          </div>
+        </article>
+
+        <!-- Custom / Automation Solutions -->
+        <article class="npc-card" data-reveal="up" style="--d:.35s">
+          <div class="npc-card__bg npc-card__bg--custom"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2l3 9H9l3-9zm0 12a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="npc-card__title">Custom Control &amp; Automation</h3>
+          <p class="npc-card__text">
+            Tailored control panels, retrofit upgrades and engineered solutions – from concept and
+            design through to commissioning and support.
+          </p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/products/custom/">Read More</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- Reveal-on-scroll script -->
+  <script>
+    (function(){
+      const els = document.querySelectorAll('.neplan-products-cards [data-reveal]');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(e => e.classList.add('is-visible'));
+        return;
+      }
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('is-visible');
+            obs.unobserve(en.target);
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -8% 0px', threshold: .15 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/header.js' %}"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IoT Modules</title>
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-specific CSS for IoT page -->
+  <link rel="stylesheet" href="{% static 'css/shield.css' %}?v=1">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main class="iot-page">
+
+    <!-- ==================== HERO ==================== -->
+    <header class="iot-hero">
+      <div class="iot-hero__bg"
+           style="--hero:url({% static 'images/iot/iot-hero.jpg' %})"></div>
+
+      <div class="wrap iot-hero__inner">
+        <div class="iot-hero__grid">
+
+          <div class="iot-hero__copy">
+            <p class="iot-eyebrow">Internet of Things (IoT)</p>
+            <h1>IoT gateways and modules to connect your plant to the cloud.</h1>
+            <p class="iot-lead">
+              iEngineering provides complete industrial automation services around IoT modules – from
+              selection and integration through to testing, commissioning and ongoing optimisation.
+              We connect your sensors, PLCs and equipment to secure IoT platforms so you can monitor,
+              analyse and act on data in real time.
+            </p>
+            <div class="iot-hero__cta">
+              <a href="/contact/" class="iot-btn iot-btn--solid">Discuss an IoT Project</a>
+              <a href="#platforms" class="iot-btn iot-btn--ghost">View IoT platforms</a>
+            </div>
+            <div class="iot-hero__tags">
+              <span>Edge Gateways</span>
+              <span>Cloud Connectivity</span>
+              <span>Industrial Protocols</span>
+              <span>Remote Monitoring</span>
+              <span>Cybersecure OT</span>
+            </div>
+          </div>
+
+          <aside class="iot-hero__card" aria-label="IoT overview">
+            <h2>Industrial IoT services</h2>
+            <ul>
+              <li><span class="dot"></span> Selection of IoT gateways and edge devices</li>
+              <li><span class="dot"></span> Integration with existing PLC, SCADA &amp; historians</li>
+              <li><span class="dot"></span> Secure connectivity to on-prem or cloud platforms</li>
+              <li><span class="dot"></span> Dashboards, alerts and analytics for operations teams</li>
+            </ul>
+            <div class="iot-hero__meta">
+              <div>
+                <strong>Multi-vendor</strong>
+                <span>Siemens, Schneider, Rockwell &amp; others</span>
+              </div>
+              <div>
+                <strong>End-to-end</strong>
+                <span>From brownfield to greenfield projects</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="iot-hero__skew"></div>
+    </header>
+
+    <!-- ==================== INTRO ==================== -->
+    <section class="iot-section iot-intro">
+      <div class="wrap iot-intro__grid">
+        <div>
+          <h2 class="iot-section__title">What do we mean by IoT modules?</h2>
+          <p class="iot-section__subtitle">
+            IoT modules and gateways sit between your field devices and IT/OT systems,
+            collecting data from sensors, PLCs and meters and securely publishing it to
+            dashboards, analytics tools and business applications.
+          </p>
+          <ul class="iot-list">
+            <li>Connect legacy PLCs, drives and instruments without replacing them</li>
+            <li>Standardise and expose process data for reporting and analytics</li>
+            <li>Enable remote monitoring, alarms and digital services for your plant</li>
+          </ul>
+        </div>
+        <div class="iot-why">
+          <h3>What a good IoT solution should deliver</h3>
+          <ul class="iot-list iot-list--tight">
+            <li>Industrial-grade hardware designed for 24/7 operation</li>
+            <li>Support for common fieldbuses and protocols (Modbus, Profinet, OPC UA, etc.)</li>
+            <li>Hardened network design and cyber-security controls built-in</li>
+            <li>Clean data models that your engineers can easily work with</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
+    <section class="iot-strip">
+      <div class="wrap iot-strip__grid">
+        <div class="iot-strip__item">
+          <i class="fa-solid fa-microchip"></i>
+          <div>
+            <h3>Siemens SIMATIC IOT2000 / IOT2050</h3>
+            <p>Open, Linux-based industrial gateways for edge connectivity and data pre-processing.</p>
+          </div>
+        </div>
+        <div class="iot-strip__item">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <div>
+            <h3>MindSphere &amp; cloud platforms</h3>
+            <p>Secure connection of plant data to MindSphere or your preferred cloud environment.</p>
+          </div>
+        </div>
+        <div class="iot-strip__item">
+          <i class="fa-solid fa-network-wired"></i>
+          <div>
+            <h3>Schneider EcoStruxure</h3>
+            <p>EcoStruxure-ready controllers and gateways for energy and process visibility.</p>
+          </div>
+        </div>
+        <div class="iot-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Allen-Bradley / Rockwell</h3>
+            <p>Integrated architectures for The Connected Enterprise with edge data access.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== IoT PLATFORMS (BIG PRODUCT CARDS) ==================== -->
+    <section id="platforms" class="iot-section iot-platforms">
+      <div class="wrap">
+        <header class="iot-platforms__head">
+          <h2 class="iot-section__title">IoT and edge platforms we support</h2>
+          <p class="iot-section__subtitle">
+            We work with leading industrial IoT platforms and gateways to bring structured,
+            cyber-secure data from the shopfloor into your analytics, CMMS, MES and business systems.
+          </p>
+        </header>
+
+        <div class="iot-platforms__list">
+
+          <!-- ============ SIEMENS SIMATIC IOT2000 / 2050 ============ -->
+          <article class="iot-card iot-card--siemens">
+            <div class="iot-card__copy">
+              <span class="iot-card__brand">SIEMENS – SIMATIC IOT2000 / IOT2050</span>
+              <h3>Edge gateways for connecting machines and sensors</h3>
+              <p>
+                Siemens SIMATIC IOT2000 and IOT2050 devices are industrial-grade IoT gateways based on
+                open Linux platforms. They read data from PLCs, sensors and serial/legacy equipment and
+                publish it to higher-level systems.
+              </p>
+              <ul class="iot-card__list">
+                <li>Support for industrial protocols and fieldbuses</li>
+                <li>Pre-processing, buffering and filtering of data at the edge</li>
+                <li>Integration with MindSphere and third-party applications</li>
+                <li>Mounting and enclosures suitable for control panels and plant rooms</li>
+              </ul>
+            </div>
+            <figure class="iot-card__media">
+              <img src="{% static 'images/iot/siemens-iot2000.jpg' %}"
+                   alt="Siemens SIMATIC IOT2000 and IOT2050 gateways">
+            </figure>
+          </article>
+
+          <!-- ============ MINDSHERE / CLOUD ============ -->
+          <article class="iot-card iot-card--mindsphere">
+            <div class="iot-card__copy">
+              <span class="iot-card__brand">SIEMENS – MindSphere &amp; cloud IoT</span>
+              <h3>Industrial IoT-as-a-service for your assets</h3>
+              <p>
+                MindSphere and other cloud IoT platforms provide a scalable environment for collecting,
+                storing and analysing time-series data from multiple plants and sites.
+              </p>
+              <ul class="iot-card__list">
+                <li>Secure onboarding of assets and data sources</li>
+                <li>KPI dashboards, alarms and notifications for operations teams</li>
+                <li>Analytics and app frameworks for custom use cases</li>
+                <li>APIs for integration with CMMS, ERP and other business systems</li>
+              </ul>
+            </div>
+            <figure class="iot-card__media">
+              <img src="{% static 'images/iot/iot-cloud.jpg' %}"
+                   alt="Industrial IoT cloud dashboards and analytics">
+            </figure>
+          </article>
+
+          <!-- ============ SCHNEIDER ECOSTRUXURE ============ -->
+          <article class="iot-card iot-card--schneider">
+            <div class="iot-card__copy">
+              <span class="iot-card__brand">SCHNEIDER ELECTRIC – EcoStruxure</span>
+              <h3>IoT-enabled energy and process architectures</h3>
+              <p>
+                Schneider EcoStruxure uses connected products, edge control and apps/analytics to give
+                visibility of energy and process performance across your operation.
+              </p>
+              <ul class="iot-card__list">
+                <li>IoT-ready controllers, meters and gateways</li>
+                <li>Energy and power quality monitoring for critical loads</li>
+                <li>Integration with EcoStruxure Power, Building or Plant platforms</li>
+                <li>Cyber-secure design aligned with your IT/OT policies</li>
+              </ul>
+            </div>
+            <figure class="iot-card__media">
+              <img src="{% static 'images/iot/schneider-ecostruxure.jpg' %}"
+                   alt="Schneider Electric EcoStruxure IoT architecture">
+            </figure>
+          </article>
+
+          <!-- ============ ALLEN-BRADLEY / ROCKWELL ============ -->
+          <article class="iot-card iot-card--ab">
+            <div class="iot-card__copy">
+              <span class="iot-card__brand">ALLEN-BRADLEY / ROCKWELL AUTOMATION</span>
+              <h3>The Connected Enterprise and edge data access</h3>
+              <p>
+                Rockwell architectures bring plant-wide data together via Logix controllers, FactoryTalk
+                services and industrial IoT gateways for The Connected Enterprise.
+              </p>
+              <ul class="iot-card__list">
+                <li>Integration with existing PLC and SCADA systems</li>
+                <li>Standardised data structures for enterprise-wide reporting</li>
+                <li>Secure remote access for support and diagnostics</li>
+                <li>Staged rollout from pilot lines to full-site deployment</li>
+              </ul>
+            </div>
+            <figure class="iot-card__media">
+              <img src="{% static 'images/iot/rockwell-iot.jpg' %}"
+                   alt="Allen-Bradley and Rockwell Automation IoT solutions">
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="iot-cta">
+      <div class="wrap iot-cta__wrap">
+        <h2>Plan your next IoT or digitalisation project with iEngineering</h2>
+        <p>
+          Share your existing control system architecture, critical assets and the KPIs you want to see.
+          We will recommend suitable IoT modules, gateways and platforms and outline a practical roadmap
+          from pilot to full-scale deployment.
+        </p>
+        <div class="iot-cta__buttons">
+          <a href="/contact/" class="iot-btn iot-btn--solid">Discuss an IoT Project</a>
+          <a href="/product/" class="iot-btn iot-btn--ghost">Back to Controls &amp; Automation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

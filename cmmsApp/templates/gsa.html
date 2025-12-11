@@ -1,0 +1,435 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLC – Programmable Logic Controller</title>
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-specific CSS (ONLY for this PLC page) -->
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}?v=1">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main class="plc-page">
+
+    <!-- ==================== HERO ==================== -->
+    <header class="plc-hero">
+      <div class="plc-hero__bg"
+           style="--hero:url('{% static "images/plc/hero-plc.jpg" %}')"></div>
+
+      <div class="wrap plc-hero__inner">
+        <div class="plc-hero__grid">
+
+          <div class="plc-hero__copy">
+            <p class="plc-eyebrow">PLC – Programmable Logic Controller</p>
+            <h1>Complete PLC solutions – testing, supply, installation &amp; commissioning.</h1>
+            <p class="plc-lead">
+              iEngineering provides complete industrial automation services for PLC systems –
+              including product selection, supply, configuration, testing, installation and
+              commissioning for Siemens, Allen-Bradley, ABB and Schneider Electric platforms.
+            </p>
+            <div class="plc-hero__cta">
+              <a href="/contact/" class="plc-btn plc-btn--solid">Submit PLC Inquiry</a>
+              <a href="#brands" class="plc-btn plc-btn--ghost">View PLC Brands</a>
+            </div>
+            <div class="plc-hero__tags">
+              <span>Testing &amp; FAT/SAT</span>
+              <span>Supply</span>
+              <span>Installation</span>
+              <span>Commissioning</span>
+              <span>Programming</span>
+            </div>
+          </div>
+
+          <aside class="plc-hero__card" aria-label="PLC overview">
+            <h2>Industrial PLC services</h2>
+            <ul>
+              <li><span class="dot"></span> Industrial automation services including PLC testing</li>
+              <li><span class="dot"></span> Supply of PLC CPUs, I/O, accessories &amp; panels</li>
+              <li><span class="dot"></span> On-site installation &amp; commissioning</li>
+              <li><span class="dot"></span> PLC programming as per IEC 61131 languages (LD, FBD, ST, SFC)</li>
+            </ul>
+            <div class="plc-hero__meta">
+              <div>
+                <strong>4+</strong>
+                <span>Global PLC brands supported</span>
+              </div>
+              <div>
+                <strong>End-to-end</strong>
+                <span>From selection to commissioning</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="plc-hero__skew"></div>
+    </header>
+
+    <!-- ==================== INTRO / STANDARDS ==================== -->
+    <section class="plc-section plc-intro">
+      <div class="wrap plc-intro__grid">
+        <div>
+          <h2 class="plc-section__title">PLC – Programmable Logic Controller</h2>
+          <p class="plc-section__subtitle">
+            iEngineering provides complete industrial automation services for PLC systems –
+            including testing, supply, installation and commissioning across a wide range of
+            industries and applications.
+          </p>
+          <ul class="plc-list">
+            <li>New projects, upgrades and PLC migration</li>
+            <li>Single machines to plant-wide automation</li>
+            <li>Integration with HMI, SCADA and DCS</li>
+          </ul>
+        </div>
+        <div class="plc-standards">
+          <h3>IEC 61131 programming standards</h3>
+          <p>International Standard IEC 61131 defines basic software architecture and programming
+             languages used in PLC control programs:</p>
+          <ul class="plc-list plc-list--tight">
+            <li>Ladder Diagram (LD)</li>
+            <li>Function Block Diagram (FBD)</li>
+            <li>Structured Text (ST)</li>
+            <li>Instruction List (IL)</li>
+            <li>Sequential Function Chart (SFC)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
+    <section id="brands" class="plc-brand-strip">
+      <div class="wrap plc-brand-strip__grid">
+        <div class="plc-brand-pill">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Siemens</span>
+        </div>
+        <div class="plc-brand-pill">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Allen-Bradley</span>
+        </div>
+        <div class="plc-brand-pill">
+          <i class="fa-solid fa-microchip"></i>
+          <span>ABB</span>
+        </div>
+        <div class="plc-brand-pill">
+          <i class="fa-solid fa-microchip"></i>
+          <span>Schneider Electric</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SIEMENS ==================== -->
+    <section class="plc-section plc-brand-block plc-brand--siemens">
+      <div class="wrap">
+        <header class="plc-brand-head">
+          <div>
+            <h2 class="plc-section__title">Siemens PLC – SIMATIC family</h2>
+            <p class="plc-section__subtitle">
+              Totally Integrated Automation from Siemens – a holistic automation concept with
+              maximum connectivity, end-to-end consistency and future-proof platforms.
+            </p>
+          </div>
+        </header>
+
+        <div class="plc-products-grid">
+          <!-- S7-200 SMART -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <!-- TODO: replace src with your actual image path -->
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Siemens SIMATIC S7-200 SMART PLC">
+            </figure>
+            <h3>S7-200 SMART</h3>
+            <p>
+              Designed for developing markets with strong price and performance demands.
+              Combined with other Siemens SMART drives, it enables cost-efficient automation
+              solutions for compact machines.
+            </p>
+          </article>
+
+          <!-- S7-1200 -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Siemens SIMATIC S7-1200 PLC">
+            </figure>
+            <h3>S7-1200</h3>
+            <p>
+              Basic controllers for lower to medium performance tasks with integrated I/O,
+              technology functions and a compact, space-saving design.
+            </p>
+          </article>
+
+          <!-- S7-300 -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Siemens SIMATIC S7-300 PLC">
+            </figure>
+            <h3>S7-300</h3>
+            <p>
+              Proven universal controller used worldwide. Modular design with a wide range
+              of modules for central or decentralized automation solutions.
+            </p>
+          </article>
+
+          <!-- S7-400 -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Siemens SIMATIC S7-400 PLC">
+            </figure>
+            <h3>S7-400</h3>
+            <p>
+              High-performance controller for large applications and complex processes,
+              supporting extensive networking and large program sizes.
+            </p>
+          </article>
+
+          <!-- SIMATIC ET 200SP -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Siemens SIMATIC ET 200SP I/O system">
+            </figure>
+            <h3>SIMATIC ET 200SP</h3>
+            <p>
+              Innovative, compact I/O system with maximum usability and strong performance
+              for distributed automation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ALLEN-BRADLEY ==================== -->
+    <section class="plc-section plc-brand-block plc-brand--ab">
+      <div class="wrap">
+        <header class="plc-brand-head">
+          <div>
+            <h2 class="plc-section__title">Allen-Bradley PLC – Rockwell Automation</h2>
+            <p class="plc-section__subtitle">
+              Allen-Bradley PLCs bring IT/OT integration and a common Studio 5000 design
+              environment across platforms.
+            </p>
+          </div>
+        </header>
+
+        <div class="plc-products-grid">
+          <!-- ControlLogix -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Allen-Bradley ControlLogix 5580/5570">
+            </figure>
+            <h3>ControlLogix 5580/5570</h3>
+            <p>
+              High-performance controllers using the Studio 5000 environment to improve
+              productivity and reduce commissioning time.
+            </p>
+          </article>
+
+          <!-- CompactLogix -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Allen-Bradley CompactLogix 5480/5370/1769-L3x">
+            </figure>
+            <h3>CompactLogix 5480/5370/1769-L3x</h3>
+            <p>
+              Part of the Integrated Architecture system with integrated safety and common
+              programming, networking and information capabilities.
+            </p>
+          </article>
+
+          <!-- SmartGuard / SLC -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Allen-Bradley SmartGuard 600 / SLC 500">
+            </figure>
+            <h3>SmartGuard 600 / SLC 500</h3>
+            <p>
+              Safety controllers with safety-rated inputs/outputs and DeviceNet / Ethernet
+              connectivity supporting CIP and CIP Safety.
+            </p>
+          </article>
+
+          <!-- Micro 800 family -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="Allen-Bradley Micro 870/850/830/820/810/800">
+            </figure>
+            <h3>Micro 870/850/830/820/810/800</h3>
+            <p>
+              Micro PLC family for standalone machine control requiring flexible communication
+              and expanded I/O.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABB ==================== -->
+    <section class="plc-section plc-brand-block plc-brand--abb">
+      <div class="wrap">
+        <header class="plc-brand-head">
+          <div>
+            <h2 class="plc-section__title">ABB PLC – AC500 series</h2>
+            <p class="plc-section__subtitle">
+              ABB’s PLC platforms support process automation, digitalization and advanced
+              measurement, focusing on safety, quality and efficiency.
+            </p>
+          </div>
+        </header>
+
+        <div class="plc-products-grid">
+          <!-- AC500 / AC500-eCo -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="ABB AC500 / AC500-eCo PLC">
+            </figure>
+            <h3>ABB AC500 / AC500-eCo</h3>
+            <p>
+              Powerful PLC platforms with wide performance, communication and I/O capabilities
+              for industrial applications – from compact eCo variants to full AC500 systems.
+            </p>
+          </article>
+
+          <!-- AC500-S / AC500-XC -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+                   alt="ABB AC500-S / AC500-XC PLC">
+            </figure>
+            <h3>ABB AC500-S / AC500-XC</h3>
+            <p>
+              Safety PLC (SIL3, PL e) and extreme condition variants for harsh environments
+              with extended temperature, vibration and gas resistance.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SCHNEIDER ELECTRIC ==================== -->
+    <section class="plc-section plc-brand-block plc-brand--se">
+      <div class="wrap">
+        <header class="plc-brand-head">
+          <div>
+            <h2 class="plc-section__title">Schneider Electric – Modicon PLC</h2>
+            <p class="plc-section__subtitle">
+              Schneider Electric leads digital transformation in industrial automation and
+              energy efficiency with the Modicon PLC range.
+            </p>
+          </div>
+        </header>
+
+        <div class="plc-products-grid">
+          <!-- M171/M172 -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/se-m171-m172.jpg' %}"
+                   alt="Schneider Modicon M171/M172">
+            </figure>
+            <h3>Modicon M171 / M172</h3>
+            <p>
+              Designed for HVAC and pumping applications, enabling scalable control with a
+              focus on energy efficiency and profitability.
+            </p>
+          </article>
+
+          <!-- M221 -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/se-m221.jpg' %}"
+                   alt="Schneider Modicon M221">
+            </figure>
+            <h3>Modicon M221</h3>
+            <p>
+              Compact controllers for small to medium automated machines, with simple
+              configuration and flexible I/O.
+            </p>
+          </article>
+
+          <!-- M241/M251 (your content had M241/M245; we keep it close) -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/se-m241-m251.jpg' %}"
+                   alt="Schneider Modicon M241/M251">
+            </figure>
+            <h3>Modicon M241 / M251</h3>
+            <p>
+              High-performance controllers for small to medium process automation where
+              connectivity and motion control are important.
+            </p>
+          </article>
+
+          <!-- M340 -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/se-m340.jpg' %}"
+                   alt="Schneider Modicon M340">
+            </figure>
+            <h3>Modicon M340</h3>
+            <p>
+              Powerful and compact PAC for small to mid-range process automation, combining
+              robustness with high-end performance.
+            </p>
+          </article>
+
+          <!-- M580 ePAC -->
+          <article class="plc-product-card">
+            <figure class="plc-product-card__image">
+              <img src="{% static 'images/plc/se-m580.jpg' %}"
+                   alt="Schneider Modicon M580 ePAC">
+            </figure>
+            <h3>Modicon M580 ePAC</h3>
+            <p>
+              Ethernet-centric ePAC scalable from single rack to plant-wide architectures,
+              offering openness, flexibility and robustness.
+            </p>
+          </article>
+        </div>
+
+        <div class="plc-download">
+          <p>
+            Need detailed specifications? Submit your inquiry to download a copy of the product flyer.
+          </p>
+          <a href="/contact/" class="plc-btn plc-btn--ghost">Submit PLC Inquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="plc-cta">
+      <div class="wrap plc-cta__wrap">
+        <h2>Ready to discuss your PLC requirements?</h2>
+        <p>
+          Share your preferred brand, I/O list and basic scope. We’ll respond with a practical
+          PLC solution covering testing, supply, installation and commissioning.
+        </p>
+        <div class="plc-cta__buttons">
+          <a href="/contact/" class="plc-btn plc-btn--solid">Submit PLC Inquiry</a>
+          <a href="/control/" class="plc-btn plc-btn--ghost">Back to Controls &amp; Automation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>

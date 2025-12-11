@@ -1,0 +1,618 @@
+/* =====================================
+   HMI Page – Human Machine Interface
+   Prefix: .hmi-
+   ===================================== */
+
+:root {
+  --hmi-ink: #0f172a;
+  --hmi-muted: #6b7280;
+  --hmi-bg-page: #f3f4f6;
+  --hmi-soft: #f9fafb;
+  --hmi-border: rgba(15, 23, 42, 0.08);
+  --hmi-primary: #0f766e;
+  --hmi-primary-2: #155e75;
+  --hmi-accent: #0ea5e9;
+  --hmi-radius-lg: 18px;
+  --hmi-radius-md: 14px;
+  --hmi-shadow-card: 0 18px 40px rgba(15, 23, 42, 0.16);
+  --hmi-shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.1);
+  --hmi-section-y: clamp(32px, 7vw, 64px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--hmi-ink);
+  background: var(--hmi-bg-page);
+  line-height: 1.6;
+}
+
+/* Works with your existing global .wrap spacing */
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 4vw, 28px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hmi-page {
+  padding-top: clamp(72px, 10vh, 96px); /* avoids sticky header overlap */
+}
+
+/* ---------- Section headers ---------- */
+.hmi-section {
+  padding: var(--hmi-section-y) 0;
+}
+
+.hmi-section__title {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #0b3b3f;
+}
+
+.hmi-section__subtitle {
+  margin: 0;
+  color: var(--hmi-muted);
+  font-size: 0.96rem;
+}
+
+/* ---------- Buttons ---------- */
+.hmi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.hmi-btn--solid {
+  color: #ffffff;
+  background: linear-gradient(90deg, var(--hmi-primary), var(--hmi-primary-2));
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.34);
+}
+
+.hmi-btn--solid:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.4);
+}
+
+.hmi-btn--ghost {
+  color: var(--hmi-primary-2);
+  background: linear-gradient(180deg, #ffffff, #f4f5fb);
+  border-color: rgba(21, 94, 117, 0.4);
+}
+
+.hmi-btn--ghost:hover {
+  transform: translateY(-1.5px);
+  border-color: var(--hmi-primary-2);
+}
+
+/* =====================================
+   HERO
+   ===================================== */
+
+.hmi-hero {
+  position: relative;
+  color: #f9fafb;
+  background: #020617;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hmi-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.15) 0, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(45, 212, 191, 0.25) 0, transparent 55%),
+    linear-gradient(130deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.7)),
+    var(--hero) center/cover no-repeat;
+  opacity: 0.96;
+}
+
+.hmi-hero__inner {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(40px, 9vw, 80px);
+  padding-bottom: clamp(70px, 11vw, 110px);
+}
+
+.hmi-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 48px);
+  align-items: center;
+}
+
+/* Eyebrow */
+.hmi-eyebrow {
+  display: inline-flex;
+  gap: 0.55rem;
+  align-items: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: #a5f3fc;
+}
+
+.hmi-eyebrow::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #67e8f9, var(--hmi-accent));
+}
+
+.hmi-hero__copy h1 {
+  margin: 0.65rem 0 0.7rem;
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.06;
+}
+
+.hmi-lead {
+  margin: 0 0 1.4rem;
+  max-width: 60ch;
+  color: rgba(241, 245, 249, 0.95);
+  font-size: clamp(0.98rem, 1.05vw, 1.05rem);
+}
+
+.hmi-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+
+.hmi-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hmi-hero__tags span {
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+/* Hero side card */
+.hmi-hero__card {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.86));
+  border-radius: 22px;
+  padding: 1.4rem 1.5rem 1.2rem;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  box-shadow: var(--hmi-shadow-card);
+}
+
+.hmi-hero__card h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.hmi-hero__card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.hmi-hero__card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0.2rem 0;
+}
+
+.hmi-hero__card .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  margin-top: 0.4rem;
+  background: linear-gradient(135deg, #22c55e, #a3e635);
+}
+
+.hmi-hero__meta {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  padding-top: 0.7rem;
+}
+
+.hmi-hero__meta div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.hmi-hero__meta strong {
+  font-size: 1rem;
+}
+
+.hmi-hero__meta span {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+}
+
+/* Skew */
+.hmi-hero__skew {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9vw;
+  height: 13vw;
+  background: var(--hmi-bg-page);
+  transform: skewY(-6deg);
+  transform-origin: 100% 0;
+}
+
+/* Hero responsive */
+@media (max-width: 960px) {
+  .hmi-hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hmi-hero__card {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .hmi-hero__inner {
+    padding-top: 56px;
+    padding-bottom: 70px;
+  }
+
+  .hmi-hero__cta {
+    flex-direction: column;
+  }
+
+  .hmi-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =====================================
+   INTRO
+   ===================================== */
+
+.hmi-intro {
+  background: #ffffff;
+  border-top: 1px solid var(--hmi-border);
+  border-bottom: 1px solid var(--hmi-border);
+}
+
+.hmi-intro__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(18px, 3.5vw, 40px);
+  align-items: flex-start;
+}
+
+.hmi-list {
+  margin: 0.6rem 0 0;
+  padding-left: 18px;
+  font-size: 0.94rem;
+  color: #111827;
+}
+
+.hmi-list--tight li {
+  margin: 0.1rem 0;
+}
+
+.hmi-why {
+  background: var(--hmi-soft);
+  border-radius: var(--hmi-radius-md);
+  padding: 1rem;
+  border: 1px solid var(--hmi-border);
+  font-size: 0.93rem;
+}
+
+.hmi-why h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b3b3f;
+}
+
+.hmi-why p {
+  margin: 0 0 0.4rem;
+  color: var(--hmi-muted);
+}
+
+/* Intro responsive */
+@media (max-width: 880px) {
+  .hmi-intro__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* =====================================
+   BRAND SUMMARY STRIP
+   ===================================== */
+
+.hmi-strip {
+  background: var(--hmi-bg-page);
+  padding: clamp(20px, 4vw, 30px) 0;
+}
+
+.hmi-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.hmi-strip__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border-radius: var(--hmi-radius-md);
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--hmi-border);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  font-size: 0.9rem;
+}
+
+.hmi-strip__item i {
+  font-size: 1.2rem;
+  color: var(--hmi-primary-2);
+  margin-top: 0.15rem;
+}
+
+.hmi-strip__item h3 {
+  margin: 0 0 0.1rem;
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #0b3b3f;
+}
+
+.hmi-strip__item p {
+  margin: 0;
+  color: var(--hmi-muted);
+}
+
+/* Strip responsive */
+@media (max-width: 960px) {
+  .hmi-strip__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .hmi-strip__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* =====================================
+   HMI FAMILIES (PLC-style cards with images)
+   ===================================== */
+
+.hmi-families {
+  background: #ffffff;
+  border-top: 1px solid var(--hmi-border);
+  border-bottom: 1px solid var(--hmi-border);
+  padding: clamp(40px, 6vw, 60px) 0;
+}
+
+.hmi-family {
+  padding: clamp(36px, 5vw, 48px) 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.hmi-family:last-of-type {
+  border-bottom: none;
+}
+
+/* Centered heading + subtitle like PLC page */
+.hmi-family__head {
+  max-width: 760px;
+  margin: 0 auto clamp(22px, 4vw, 30px);
+  text-align: center;
+}
+
+.hmi-family__head h2 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+  font-weight: 900;
+  color: #0b3b3f;
+}
+
+.hmi-family__head p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.96rem;
+}
+
+/* Card grid (similar to PLC layout) */
+.hmi-family__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hmi-card {
+  background: #ffffff;
+  border-radius: 30px;
+  border: 1px solid rgba(15, 23, 42, 0.03);
+  box-shadow: 0 32px 70px rgba(15, 23, 42, 0.09);
+  padding: 1.1rem 1.4rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.94rem;
+}
+
+/* Top strip with image + full product name (PLC-style) */
+.hmi-card__stripe {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  margin: -0.25rem -0.2rem 0.7rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  background: linear-gradient(90deg, #e0f2fe, #f9fafb);
+}
+
+.hmi-card__figure {
+  margin: 0;
+  width: 52px;
+  height: 30px;
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hmi-card__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hmi-card__tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hmi-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0b3b3f;
+}
+
+.hmi-card p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* subtle brand tints for stripe */
+.hmi-family--siemens .hmi-card__stripe {
+  background: linear-gradient(90deg, #e0f2fe, #f5f9ff);
+}
+
+.hmi-family--ab .hmi-card__stripe {
+  background: linear-gradient(90deg, #fee2e2, #fff1f2);
+}
+
+.hmi-family--abb .hmi-card__stripe {
+  background: linear-gradient(90deg, #fee2e2, #ffe4e6);
+}
+
+.hmi-family--se .hmi-card__stripe {
+  background: linear-gradient(90deg, #ecfdf5, #e0f2fe);
+}
+
+/* Note under Schneider section */
+.hmi-family__note {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Families responsive */
+@media (max-width: 1024px) {
+  .hmi-family__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .hmi-family__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hmi-card {
+    border-radius: 20px;
+  }
+}
+
+/* =====================================
+   CTA
+   ===================================== */
+
+.hmi-cta {
+  background: linear-gradient(180deg, #f9fafb, #e5edf5);
+  border-top: 1px solid var(--hmi-border);
+  padding: var(--hmi-section-y) 0;
+}
+
+.hmi-cta__wrap {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.7rem;
+}
+
+.hmi-cta__wrap h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+}
+
+.hmi-cta__wrap p {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--hmi-muted);
+  font-size: 0.96rem;
+}
+
+.hmi-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 640px) {
+  .hmi-cta__buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hmi-cta__buttons .hmi-btn {
+    width: 100%;
+  }
+}

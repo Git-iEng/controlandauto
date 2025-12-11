@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DCS – Distributed Control System | iEngineering</title>
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-specific CSS (ONLY for this DCS page) -->
+  <link rel="stylesheet" href="{% static 'css/xgsatd.css' %}?v=1">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main class="dcs-page">
+
+    <!-- ==================== HERO ==================== -->
+    <header class="dcs-hero">
+      <div class="dcs-hero__bg"
+           style="--hero:url({% static 'images/dcs/dcs-hero.jpg' %})"></div>
+
+      <div class="wrap dcs-hero__inner">
+        <div class="dcs-hero__grid">
+
+          <div class="dcs-hero__copy">
+            <p class="dcs-eyebrow">DCS – Distributed Control System</p>
+            <h1>Distributed control for complex, continuous plants.</h1>
+            <p class="dcs-lead">
+              iEngineering provides complete Industrial Automation services for DCS –
+              including testing, supply, installation &amp; commissioning. Our distributed
+              control solutions combine HMI, controllers, common database, alarm management
+              and engineering tools into a single, integrated system.
+            </p>
+            <div class="dcs-hero__cta">
+              <a href="/contact/" class="dcs-btn dcs-btn--solid">Submit DCS Inquiry</a>
+              <a href="#platforms" class="dcs-btn dcs-btn--ghost">View DCS platforms</a>
+            </div>
+            <div class="dcs-hero__tags">
+              <span>Testing</span>
+              <span>Supply</span>
+              <span>Installation</span>
+              <span>Commissioning</span>
+              <span>Alarm Management</span>
+            </div>
+          </div>
+
+          <aside class="dcs-hero__card" aria-label="DCS overview">
+            <h2>Industrial DCS services</h2>
+            <ul>
+              <li><span class="dot"></span> Design &amp; engineering of new DCS architectures</li>
+              <li><span class="dot"></span> Migration from legacy systems to modern platforms</li>
+              <li><span class="dot"></span> HMI/SCADA integration, alarms &amp; historian</li>
+              <li><span class="dot"></span> On-site commissioning, loop checks &amp; training</li>
+            </ul>
+            <div class="dcs-hero__meta">
+              <div>
+                <strong>4+</strong>
+                <span>Leading DCS platforms supported</span>
+              </div>
+              <div>
+                <strong>End-to-end</strong>
+                <span>From concept to lifecycle support</span>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <div class="dcs-hero__skew"></div>
+    </header>
+
+    <!-- ==================== INTRO ==================== -->
+    <section class="dcs-section dcs-intro">
+      <div class="wrap dcs-intro__grid">
+        <div>
+          <h2 class="dcs-section__title">DCS for modern process industries</h2>
+          <p class="dcs-section__subtitle">
+            A distributed control system (DCS) is the platform of choice for large,
+            continuous plants – integrating control, supervision and operations into a
+            single environment.
+          </p>
+          <ul class="dcs-list">
+            <li>Centralised view of the entire plant with distributed controllers</li>
+            <li>Redundant networks, servers and controllers for high availability</li>
+            <li>Integrated alarm, historian and engineering tools</li>
+          </ul>
+        </div>
+        <div class="dcs-why">
+          <h3>What a good DCS should deliver</h3>
+          <ul class="dcs-list dcs-list--tight">
+            <li>Consistent control strategy from field to control room</li>
+            <li>Standardised graphics, faceplates and alarm philosophy</li>
+            <li>Easy expansion and online modifications during plant life</li>
+            <li>Seamless integration with PLC, SCADA and enterprise systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
+    <section class="dcs-strip">
+      <div class="wrap dcs-strip__grid">
+        <div class="dcs-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Siemens</h3>
+            <p>SIMATIC PCS 7 for integrated process control and modernization.</p>
+          </div>
+        </div>
+        <div class="dcs-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Honeywell</h3>
+            <p>Experion LS &amp; PKS, scalable from small systems to large plants.</p>
+          </div>
+        </div>
+        <div class="dcs-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Yokogawa</h3>
+            <p>CENTUM VP family, field-proven for demanding process industries.</p>
+          </div>
+        </div>
+        <div class="dcs-strip__item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <div>
+            <h3>Rockwell</h3>
+            <p>PlantPAx process automation system with FactoryTalk tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DCS PLATFORMS (BIG PRODUCT CARDS) ==================== -->
+    <section id="platforms" class="dcs-section dcs-platforms">
+      <div class="wrap">
+        <header class="dcs-platforms__head">
+          <h2 class="dcs-section__title">DCS platforms we support</h2>
+          <p class="dcs-section__subtitle">
+            We work with leading DCS vendors to engineer, migrate and support systems across
+            power, oil &amp; gas, chemicals, water, mining and other process industries.
+          </p>
+        </header>
+
+        <div class="dcs-platforms__list">
+
+          <!-- ============ SIEMENS PCS 7 ============ -->
+          <article class="dcs-card dcs-card--siemens">
+            <div class="dcs-card__copy">
+              <span class="dcs-card__brand">SIEMENS – SIMATIC PCS 7</span>
+              <h3>SIMATIC PCS 7 – integrated process control</h3>
+              <p>
+                SIMATIC PCS 7 is more than a DCS – it provides a flexible platform for
+                modernizing existing systems, even during runtime. Its scalable
+                architecture and engineering tools support everything from small units to
+                large, integrated plants.
+              </p>
+              <ul class="dcs-card__list">
+                <li>High-performance engineering with common project database</li>
+                <li>Integrated alarm management, asset management &amp; safety functions</li>
+                <li>Excellent connectivity to fieldbus, PLC and enterprise systems</li>
+              </ul>
+            </div>
+            <figure class="dcs-card__media">
+              <!-- 🔁 Replace with your actual PCS 7 image path -->
+              <img src="{% static 'images/dcs/siemens-pcs7.jpg' %}"
+                   alt="Siemens SIMATIC PCS 7 system">
+            </figure>
+          </article>
+
+          <!-- ============ HONEYWELL EXPERION ============ -->
+          <article class="dcs-card dcs-card--honeywell">
+            <div class="dcs-card__copy">
+              <span class="dcs-card__brand">HONEYWELL – Experion family</span>
+              <h3>Experion LS &amp; PKS – flexible Honeywell DCS</h3>
+              <p>
+                Honeywell Experion LS is a compact, flexible DCS with the power and
+                reliability of larger systems, while Experion PKS scales to major
+                facilities with integrated plant-wide information.
+              </p>
+              <ul class="dcs-card__list">
+                <li>Experion LS – easy to configure, low engineering &amp; lifecycle cost</li>
+                <li>Experion PKS – integrates data from controllers across the plant</li>
+                <li>Support for legacy migrations including TDC 3000</li>
+              </ul>
+            </div>
+            <figure class="dcs-card__media">
+              <!-- 🔁 Replace with your actual Honeywell DCS image path -->
+              <img src="{% static 'images/dcs/honeywell-experion.jpg' %}"
+                   alt="Honeywell Experion DCS">
+            </figure>
+          </article>
+
+          <!-- ============ YOKOGAWA CENTUM ============ -->
+          <article class="dcs-card dcs-card--yokogawa">
+            <div class="dcs-card__copy">
+              <span class="dcs-card__brand">YOKOGAWA – CENTUM VP</span>
+              <h3>CENTUM VP – field-proven Yokogawa DCS</h3>
+              <p>
+                Yokogawa’s CENTUM VP series is known for high availability and long-term
+                lifecycle support, providing stable operation for critical process plants.
+              </p>
+              <ul class="dcs-card__list">
+                <li>Ninth-generation CENTUM VP architecture with HMI, FCS &amp; control network</li>
+                <li>R6.x platform engineered for performance and plant-wide optimisation</li>
+                <li>Supports upgrades from CENTUM CS, CS 1000 and CS 3000</li>
+              </ul>
+            </div>
+            <figure class="dcs-card__media">
+              <!-- 🔁 Replace with your actual Yokogawa CENTUM image path -->
+              <img src="{% static 'images/dcs/yokogawa-centum-vp.jpg' %}"
+                   alt="Yokogawa CENTUM VP DCS">
+            </figure>
+          </article>
+
+          <!-- ============ ROCKWELL PLANTPAX ============ -->
+          <article class="dcs-card dcs-card--rockwell">
+            <div class="dcs-card__copy">
+              <span class="dcs-card__brand">ROCKWELL – PlantPAx</span>
+              <h3>PlantPAx – Rockwell process automation system</h3>
+              <p>
+                Rockwell’s PlantPAx modern DCS brings process automation onto a common
+                platform with Rockwell PLCs and FactoryTalk software for unified
+                information access.
+              </p>
+              <ul class="dcs-card__list">
+                <li>Integrated with Logix controllers and FactoryTalk applications</li>
+                <li>Standard libraries, faceplates and diagnostics for faster projects</li>
+                <li>Scalable from unit control to full plant implementations</li>
+              </ul>
+            </div>
+            <figure class="dcs-card__media">
+              <!-- 🔁 Replace with your actual PlantPAx / FactoryTalk image path -->
+              <img src="{% static 'images/dcs/rockwell-plantpax.jpg' %}"
+                   alt="Rockwell PlantPAx DCS">
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="dcs-cta">
+      <div class="wrap dcs-cta__wrap">
+        <h2>Ready to plan or upgrade your DCS?</h2>
+        <p>
+          Share your existing platform (PCS 7, Experion, CENTUM, PlantPAx or others),
+          I/O count and key process units. We’ll respond with a practical migration or
+          new-build concept, aligned with your operations and budget.
+        </p>
+        <div class="dcs-cta__buttons">
+          <a href="/contact/" class="dcs-btn dcs-btn--solid">Submit DCS Inquiry</a>
+          <a href="/control/" class="dcs-btn dcs-btn--ghost">Back to Controls &amp; Automation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>
