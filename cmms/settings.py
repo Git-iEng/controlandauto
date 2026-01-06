@@ -136,10 +136,11 @@ EMAIL_HOST_USER = 'test@ieng.tech'  # Your email address
 EMAIL_HOST_PASSWORD = 'test@iEng'  # Your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_RECIPIENTS = [
-    "mayur@iengaust.com.au",
-   "diksha@iengaust.com.au",
+    "shila@iengaust.com.au",
+   "enquiries@iengaust.com.au",
+   "test@ieng.tech"
 ]
-CONTACT_RECIPIENTS = ["mayur@iengaust.com.au","diksha@iengaust.com.au"]
+CONTACT_RECIPIENTS = ["shila@iengaust.com.au","enquiries@iengaust.com.au","test@ieng.tech"]
 DEMO_RECIPIENTS = CONTACT_RECIPIENTS
 
 # CONTACT_EMAIL = 'diksha@iengaust.com.au'
@@ -151,3 +152,5 @@ EMAIL_TIMEOUT = 15
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
+
+CSRF_TRUSTED_ORIGINS = ["https://controlandautomation.ieng.tech"]

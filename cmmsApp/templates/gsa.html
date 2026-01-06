@@ -32,9 +32,9 @@
             <p class="plc-eyebrow">PLC – Programmable Logic Controller</p>
             <h1>Complete PLC solutions – testing, supply, installation &amp; commissioning.</h1>
             <p class="plc-lead">
-              iEngineering provides complete industrial automation services for PLC systems –
-              including product selection, supply, configuration, testing, installation and
-              commissioning for Siemens, Allen-Bradley, ABB and Schneider Electric platforms.
+             iEngineering delivers end-to-end PLC automation solutions from system design and hardware selection to programming, testing (FAT/SAT), installation, and commissioning.
+              We help industries build reliable, efficient, and future-ready control systems using globally trusted PLC platforms.<br>
+              Siemens | Allen-Bradley | ABB | Schneider Electric
             </p>
             <div class="plc-hero__cta">
               <a href="/contact/" class="plc-btn plc-btn--solid">Submit PLC Inquiry</a>
@@ -52,10 +52,11 @@
           <aside class="plc-hero__card" aria-label="PLC overview">
             <h2>Industrial PLC services</h2>
             <ul>
-              <li><span class="dot"></span> Industrial automation services including PLC testing</li>
-              <li><span class="dot"></span> Supply of PLC CPUs, I/O, accessories &amp; panels</li>
-              <li><span class="dot"></span> On-site installation &amp; commissioning</li>
-              <li><span class="dot"></span> PLC programming as per IEC 61131 languages (LD, FBD, ST, SFC)</li>
+              <li><span class="dot"></span> PLC system engineering, testing & FAT / SAT</li>
+              <li><span class="dot"></span> Supply of PLC CPUs, I/O modules, accessories & control panels</li>
+              <li><span class="dot"></span> On-site installation, wiring & commissioning</li>
+              <li><span class="dot"></span> PLC programming compliant with IEC 61131-3 standards
+              (LD, FBD, ST, SFC)</li>
             </ul>
             <div class="plc-hero__meta">
               <div>
@@ -64,7 +65,7 @@
               </div>
               <div>
                 <strong>End-to-end</strong>
-                <span>From selection to commissioning</span>
+                <span>From Concept to Commissioning</span>
               </div>
             </div>
           </aside>
@@ -81,9 +82,8 @@
         <div>
           <h2 class="plc-section__title">PLC – Programmable Logic Controller</h2>
           <p class="plc-section__subtitle">
-            iEngineering provides complete industrial automation services for PLC systems –
-            including testing, supply, installation and commissioning across a wide range of
-            industries and applications.
+            At iEngineering, we specialize in delivering robust and scalable PLC automation solutions for industrial applications of all sizes. Our expertise covers the complete project lifecycle engineering, supply, programming, testing (FAT/SAT), installation, commissioning, and ongoing support.
+            By working with industry-leading PLC platforms such as Siemens, Allen-Bradley (Rockwell Automation), ABB, and Schneider Electric, we ensure high system reliability, operational efficiency, and long-term performance.
           </p>
           <ul class="plc-list">
             <li>New projects, upgrades and PLC migration</li>
@@ -92,41 +92,55 @@
           </ul>
         </div>
         <div class="plc-standards">
-          <h3>IEC 61131 programming standards</h3>
-          <p>International Standard IEC 61131 defines basic software architecture and programming
-             languages used in PLC control programs:</p>
+          <h3>IEC 61131-3 Programming Standards</h3>
+          <p>IEC 61131-3 is the international standard that defines PLC programming languages, ensuring structured, reliable, and maintainable control logic:</p>
           <ul class="plc-list plc-list--tight">
-            <li>Ladder Diagram (LD)</li>
-            <li>Function Block Diagram (FBD)</li>
-            <li>Structured Text (ST)</li>
-            <li>Instruction List (IL)</li>
-            <li>Sequential Function Chart (SFC)</li>
+            <li>Ladder Diagram (LD) – Operator-friendly logic</li>
+            <li>Function Block Diagram (FBD) – Modular control design</li>
+            <li>Structured Text (ST) – Advanced and complex algorithms</li>
+            <li>Instruction List (IL) – Low-level programming</li>
+            <li>Sequential Function Chart (SFC) – Process and sequence control</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
-    <section id="brands" class="plc-brand-strip">
-      <div class="wrap plc-brand-strip__grid">
-        <div class="plc-brand-pill">
-          <i class="fa-solid fa-microchip"></i>
-          <span>Siemens</span>
-        </div>
-        <div class="plc-brand-pill">
-          <i class="fa-solid fa-microchip"></i>
-          <span>Allen-Bradley</span>
-        </div>
-        <div class="plc-brand-pill">
-          <i class="fa-solid fa-microchip"></i>
-          <span>ABB</span>
-        </div>
-        <div class="plc-brand-pill">
-          <i class="fa-solid fa-microchip"></i>
-          <span>Schneider Electric</span>
-        </div>
-      </div>
-    </section>
+<!-- ==================== BRAND SUMMARY STRIP (LOGOS) ==================== -->
+<section id="brands" class="plc-brand-strip">
+  <div class="wrap plc-brand-strip__grid">
+
+    <a class="plc-brand-pill" href="#siemens" aria-label="Siemens PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/abb.png' %}"
+           alt="Siemens">
+      <span>Siemens</span>
+    </a>
+
+    <a class="plc-brand-pill" href="#allen-bradley" aria-label="Allen-Bradley PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/abb.png' %}"
+           alt="Allen-Bradley">
+      <span>Allen-Bradley</span>
+    </a>
+
+    <a class="plc-brand-pill" href="#abb" aria-label="ABB PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/abb.png' %}"
+           alt="ABB">
+      <span>ABB</span>
+    </a>
+
+    <a class="plc-brand-pill" href="#schneider" aria-label="Schneider Electric PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/abb.png' %}"
+           alt="Schneider Electric">
+      <span>Schneider Electric</span>
+    </a>
+
+  </div>
+</section>
+
+
 
     <!-- ==================== SIEMENS ==================== -->
     <section class="plc-section plc-brand-block plc-brand--siemens">
@@ -146,7 +160,7 @@
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
               <!-- TODO: replace src with your actual image path -->
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/S7-200.avif' %}"
                    alt="Siemens SIMATIC S7-200 SMART PLC">
             </figure>
             <h3>S7-200 SMART</h3>
@@ -160,7 +174,7 @@
           <!-- S7-1200 -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/S7-1200.avif' %}"
                    alt="Siemens SIMATIC S7-1200 PLC">
             </figure>
             <h3>S7-1200</h3>
@@ -173,7 +187,7 @@
           <!-- S7-300 -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/S7-300.avif' %}"
                    alt="Siemens SIMATIC S7-300 PLC">
             </figure>
             <h3>S7-300</h3>
@@ -186,7 +200,7 @@
           <!-- S7-400 -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/S7-400.avif' %}"
                    alt="Siemens SIMATIC S7-400 PLC">
             </figure>
             <h3>S7-400</h3>
@@ -199,7 +213,7 @@
           <!-- SIMATIC ET 200SP -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/SIMATIC-ET-200.avif' %}"
                    alt="Siemens SIMATIC ET 200SP I/O system">
             </figure>
             <h3>SIMATIC ET 200SP</h3>
@@ -229,7 +243,7 @@
           <!-- ControlLogix -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/CONTROLLOGIX 5580_5570.avif' %}"
                    alt="Allen-Bradley ControlLogix 5580/5570">
             </figure>
             <h3>ControlLogix 5580/5570</h3>
@@ -242,7 +256,7 @@
           <!-- CompactLogix -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/COMPACTLOGIX 5480_5370_1769 -L3x.avif' %}"
                    alt="Allen-Bradley CompactLogix 5480/5370/1769-L3x">
             </figure>
             <h3>CompactLogix 5480/5370/1769-L3x</h3>
@@ -255,7 +269,7 @@
           <!-- SmartGuard / SLC -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/SMARTGUARD 600_SLC 500.avif' %}"
                    alt="Allen-Bradley SmartGuard 600 / SLC 500">
             </figure>
             <h3>SmartGuard 600 / SLC 500</h3>
@@ -268,7 +282,7 @@
           <!-- Micro 800 family -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/MICRO 870_850_830_820_810_800.avif' %}"
                    alt="Allen-Bradley Micro 870/850/830/820/810/800">
             </figure>
             <h3>Micro 870/850/830/820/810/800</h3>
@@ -298,7 +312,7 @@
           <!-- AC500 / AC500-eCo -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/ABB AC500_AC500-eCo.avif' %}"
                    alt="ABB AC500 / AC500-eCo PLC">
             </figure>
             <h3>ABB AC500 / AC500-eCo</h3>
@@ -311,7 +325,7 @@
           <!-- AC500-S / AC500-XC -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/S7-200-SMART.png' %}"
+              <img src="{% static 'images/plc2/ABB AC500-S_AC500-XC.avif' %}"
                    alt="ABB AC500-S / AC500-XC PLC">
             </figure>
             <h3>ABB AC500-S / AC500-XC</h3>
@@ -341,7 +355,7 @@
           <!-- M171/M172 -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/se-m171-m172.jpg' %}"
+              <img src="{% static 'images/plc2/SCHNEIDER MODICON M171_M172.avif' %}"
                    alt="Schneider Modicon M171/M172">
             </figure>
             <h3>Modicon M171 / M172</h3>
@@ -354,7 +368,7 @@
           <!-- M221 -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/se-m221.jpg' %}"
+              <img src="{% static 'images/plc2/SCHNEIDER MODICON M221.avif' %}"
                    alt="Schneider Modicon M221">
             </figure>
             <h3>Modicon M221</h3>
@@ -367,7 +381,7 @@
           <!-- M241/M251 (your content had M241/M245; we keep it close) -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/se-m241-m251.jpg' %}"
+              <img src="{% static 'images/plc2/SCHNEIDER MODICON M241_M245.avif' %}"
                    alt="Schneider Modicon M241/M251">
             </figure>
             <h3>Modicon M241 / M251</h3>
@@ -380,7 +394,7 @@
           <!-- M340 -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/se-m340.jpg' %}"
+              <img src="{% static 'images/plc2/19.avif' %}"
                    alt="Schneider Modicon M340">
             </figure>
             <h3>Modicon M340</h3>
@@ -393,7 +407,7 @@
           <!-- M580 ePAC -->
           <article class="plc-product-card">
             <figure class="plc-product-card__image">
-              <img src="{% static 'images/plc/se-m580.jpg' %}"
+              <img src="{% static 'images/plc2/20.avif' %}"
                    alt="Schneider Modicon M580 ePAC">
             </figure>
             <h3>Modicon M580 ePAC</h3>

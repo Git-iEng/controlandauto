@@ -365,6 +365,7 @@ body {
   margin: 0;
   font-size: 1rem;
   font-weight: 800;
+  color: #2d6869;
 }
 
 .ctrl-cap-card p {
@@ -718,3 +719,5 @@ img {
   height: auto;
   display: block;
 }
+
+

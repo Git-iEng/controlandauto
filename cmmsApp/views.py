@@ -24,7 +24,13 @@ from .utils_excel import append_submission_xlsx
 from .utils_contact import normalize_phone_and_country, country_name_from_alpha2
 from django.http import JsonResponse
 import pycountry, phonenumbers
-
+from django.http import HttpResponse
+from django.contrib.staticfiles.storage import staticfiles_storage
+ 
+def sitemap(request):
+    with staticfiles_storage.open("sitemap.xml") as f:
+        return HttpResponse(f.read(), content_type="application/xml")
+ 
 
 # ---------- Validation patterns ----------
 NAME_RE  = re.compile(r"^[A-Za-z\s'.-]{2,}$")

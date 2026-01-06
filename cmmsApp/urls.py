@@ -26,22 +26,22 @@ path("product/", views.product, name="product"),
      # --- NEW: consulting block form + helper ---
     path("contact/submit/", views.contact_block_submit, name="contact_submit"),
     path("contact/phone-info/", views.phone_info, name="phone_info"),
-    path('gsa/', views.gsa, name='gsa'),
+    path('plc/', views.gsa, name='gsa'),
 
 
-     path('gsafd/', views.gsafd, name='gsafd'),
+     path('hmi/', views.gsafd, name='gsafd'),
 
      path('product/neplan-electricity/', views.neplan_electricity, name='neplan-electricity'),
      path('product/gsafd/', views.gsafd, name='gsafd'),
     path("contact/country-list/", views.country_list, name="country_list"),
-path('xgsfd/', views.xgsfd, name='xgsfd'),
+path('scada/', views.xgsfd, name='xgsfd'),
 path('services/', views.services, name='services'),
 # path('neplan-additional-solutions/', views.neplan_additional_solutions, name='neplan_additional_solutions'),
 
-path('nets/', views.nets, name='nets'),
-path('xgsatd/', views.xgsatd, name='xgsatd'),
-path('sheild/', views.sheild, name='sheild'),
-
+path('vsd/', views.nets, name='nets'),
+path('dcs/', views.xgsatd, name='xgsatd'),
+path('iot/', views.sheild, name='sheild'),
+path("sitemap.xml", views.sitemap, name="sitemap"),
 
 path('product/xgsfd/', views.xgsfd, name='xgsfd'),
 path('neplan-asset-management/', views.neplan_asset_management, name='neplan_asset_management'),

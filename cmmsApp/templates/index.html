@@ -91,9 +91,9 @@
         <div class="ctrl-capabilities__grid">
           <!-- 1. PLC -->
           <article class="ctrl-cap-card">
-            <div class="ctrl-cap-card__icon">
+            {% comment %} <div class="ctrl-cap-card__icon">
               <i class="fa-solid fa-microchip"></i>
-            </div>
+            </div> {% endcomment %}
             <h3>Programmable Logic Controller (PLC)</h3>
             <p>
               We deliver tailored PLC solutions featuring advanced automation for machinery, processes
@@ -105,9 +105,9 @@
 
           <!-- 2. HMI -->
           <article class="ctrl-cap-card">
-            <div class="ctrl-cap-card__icon">
+            {% comment %} <div class="ctrl-cap-card__icon">
               <i class="fa-regular fa-display"></i>
-            </div>
+            </div> {% endcomment %}
             <h3>Human Machine Interface (HMI)</h3>
             <p>
               iEngineering provides advanced HMI solutions from Siemens, Allen-Bradley, ABB and
@@ -118,9 +118,9 @@
 
           <!-- 3. SCADA -->
           <article class="ctrl-cap-card">
-            <div class="ctrl-cap-card__icon">
+            {% comment %} <div class="ctrl-cap-card__icon">
               <i class="fa-solid fa-diagram-project"></i>
-            </div>
+            </div> {% endcomment %}
             <h3>Supervisory Control and Data Acquisition (SCADA)</h3>
             <p>
               We offer state-of-the-art SCADA solutions featuring brands such as Siemens, Allen-Bradley,
@@ -131,9 +131,9 @@
 
           <!-- 4. DCS -->
           <article class="ctrl-cap-card">
-            <div class="ctrl-cap-card__icon">
+            {% comment %} <div class="ctrl-cap-card__icon">
               <i class="fa-solid fa-network-wired"></i>
-            </div>
+            </div> {% endcomment %}
             <h3>Distributed Control Systems (DCS)</h3>
             <p>
               Our DCS solutions leverage platforms from Rockwell, Honeywell, Yokogawa and Siemens.
@@ -144,9 +144,9 @@
 
           <!-- 5. VSD -->
           <article class="ctrl-cap-card">
-            <div class="ctrl-cap-card__icon">
+            {% comment %} <div class="ctrl-cap-card__icon">
               <i class="fa-solid fa-gauge-high"></i>
-            </div>
+            </div> {% endcomment %}
             <h3>Variable Speed Drives (VSD)</h3>
             <p>
               iEngineering supplies Variable Speed Drives for precise motor speed control and improved
@@ -157,9 +157,9 @@
 
           <!-- 6. IoT Modules -->
           <article class="ctrl-cap-card">
-            <div class="ctrl-cap-card__icon">
+            {% comment %} <div class="ctrl-cap-card__icon">
               <i class="fa-solid fa-cloud"></i>
-            </div>
+            </div> {% endcomment %}
             <h3>Internet of Things (IoT) Modules</h3>
             <p>
               We offer IoT modules and gateways from Siemens, Schneider and ABB that enable seamless
@@ -187,7 +187,7 @@
           </ul>
         </div>
         <figure class="ctrl-arch__media" aria-hidden="true">
-          <img src="{% static 'images/controls/panels.jpg' %}" alt="Control and automation panel layout">
+          <img src="{% static 'images/homenew.jpg' %}" alt="Control and automation panel layout">
         </figure>
       </div>
     </section>
@@ -274,14 +274,13 @@
       </div>
     </section>
 
-    <!-- ============ LOGOS ============ -->
     <section class="ctrl-logos">
       <div class="wrap ctrl-logos__row">
         <img src="{% static 'images/controls/logos/ab.png' %}" alt="Allen-Bradley">
         <img src="{% static 'images/controls/logos/siemens.png' %}" alt="Siemens">
         <img src="{% static 'images/controls/logos/abb.png' %}" alt="ABB">
-        <img src="{% static 'images/controls/logos/ignition.png' %}" alt="Ignition">
-        <img src="{% static 'images/controls/logos/opc.png' %}" alt="OPC UA">
+        <img src="{% static 'images/controls/logos/ignition.png' %}" alt="Schider">
+        {% comment %} <img src="{% static 'images/controls/logos/opc.png' %}" alt="OPC UA"> {% endcomment %}
       </div>
     </section>
 

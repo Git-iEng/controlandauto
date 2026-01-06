@@ -586,3 +586,40 @@ img {
     width: 100%;
   }
 }
+
+
+/* ===== DCS custom list bullets (PLC-style) ===== */
+
+/* remove default bullets + control spacing */
+.dcs-list,
+.dcs-card__list{
+  list-style: none;
+  padding-left: 0;
+  margin: 0.6rem 0 0;
+}
+
+.dcs-list li,
+.dcs-card__list li{
+  position: relative;
+  padding-left: 16px;     /* space for custom dot */
+  margin: 0.35rem 0;
+}
+
+/* custom dot */
+.dcs-list li::before,
+.dcs-card__list li::before{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, var(--dcs-primary), var(--dcs-accent));
+}
+
+/* tighter list */
+.dcs-list--tight li{
+  margin: 0.2rem 0;
+}
