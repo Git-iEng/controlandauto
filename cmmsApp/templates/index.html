@@ -249,6 +249,84 @@
         </div>
       </div>
     </section>
+    <!-- ============ PROJECTS PREVIEW ============ -->
+<section class="ctrl-section ctrl-projects">
+  <div class="wrap">
+    <header class="ctrl-section__head ctrl-section__head--center">
+      <h2 class="ctrl-section__title">Recent projects</h2>
+      <p class="ctrl-section__subtitle">
+        A snapshot of selected work and supply. View the full project details on our Projects page.
+      </p>
+    </header>
+
+    <div class="ctrl-projects__grid">
+      <!-- Project 1 -->
+      <article class="ctrl-proj-card">
+        <div class="ctrl-proj-card__media">
+          <img src="{% static 'images/comp.avif' %}" alt="BSP Rolling Mill Automation and DC Drive Upgrade" loading="lazy">
+        </div>
+        <div class="ctrl-proj-card__body">
+          <div class="ctrl-proj-card__kicker">
+            <span class="ctrl-proj-pill"><i class="fa-solid fa-location-dot"></i> Fiji</span>
+            <span class="ctrl-proj-tag">Project 1</span>
+          </div>
+          <h3>Automation and DC Drive Upgrade</h3>
+          <p>
+            Automation and DC drive modernisation retaining the existing motor, improving stability,
+            diagnostics and downtime performance.
+          </p>
+          <a class="ctrl-proj-card__btn" href="/project/">View project details</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="ctrl-proj-card">
+        <div class="ctrl-proj-card__media">
+          <!-- Use any relevant image you already have -->
+          <img src="{% static 'images/pro/12.avif' %}" alt="Supply of SCADA Level Spares to a Water Utility" loading="lazy">
+        </div>
+        <div class="ctrl-proj-card__body">
+          <div class="ctrl-proj-card__kicker">
+            <span class="ctrl-proj-pill"><i class="fa-solid fa-location-dot"></i> Fiji</span>
+            <span class="ctrl-proj-tag">Project 2</span>
+          </div>
+          <h3>Supply of SCADA Level Spares to a Water Utility</h3>
+          <p>
+            Supply of critical SCADA spares and components to improve maintenance readiness
+            and reduce response time during failures.
+          </p>
+          <a class="ctrl-proj-card__btn" href="/project/">View project details</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="ctrl-proj-card">
+        <div class="ctrl-proj-card__media">
+          <!-- Replace with your Vacon/Danfoss photo path if different -->
+          <img src="{% static 'images/pro/20.png' %}" alt="Supply of Danfoss VACON Variable Speed Drives" loading="lazy">
+        </div>
+        <div class="ctrl-proj-card__body">
+          <div class="ctrl-proj-card__kicker">
+            <span class="ctrl-proj-pill"><i class="fa-solid fa-location-dot"></i> Fiji</span>
+            <span class="ctrl-proj-tag">Project 3</span>
+          </div>
+          <h3>Supply of Danfoss VACON Variable Speed Drives for Utility Applications</h3>
+          <p>
+            Supply of VACON VSDs for reliable motor control and energy efficiency in utility applications,
+            including spares and support.
+          </p>
+          <a class="ctrl-proj-card__btn" href="/project/">View project details</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="ctrl-projects__cta">
+      <a href="/project/" class="ctrl-btn ctrl-btn--solid">Explore all projects</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- ============ TESTIMONIALS ============ -->
     <section class="ctrl-section ctrl-testimonials">
@@ -276,10 +354,10 @@
 
     <section class="ctrl-logos">
       <div class="wrap ctrl-logos__row">
-        <img src="{% static 'images/controls/logos/ab.png' %}" alt="Allen-Bradley">
-        <img src="{% static 'images/controls/logos/siemens.png' %}" alt="Siemens">
-        <img src="{% static 'images/controls/logos/abb.png' %}" alt="ABB">
-        <img src="{% static 'images/controls/logos/ignition.png' %}" alt="Schider">
+        <img src="{% static 'images/logo/1.avif' %}" alt="Allen-Bradley">
+        <img src="{% static 'images/logo/2.avif' %}" alt="Siemens">
+        <img src="{% static 'images/logo/3.avif' %}" alt="ABB">
+        <img src="{% static 'images/logo/4.avif' %}" alt="Schider">
         {% comment %} <img src="{% static 'images/controls/logos/opc.png' %}" alt="OPC UA"> {% endcomment %}
       </div>
     </section>

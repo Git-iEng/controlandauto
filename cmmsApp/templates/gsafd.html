@@ -102,41 +102,38 @@ We support leading HMI platforms from Siemens, Allen-Bradley, ABB, and Schneider
       </div>
     </section>
 
-    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
-    <section class="hmi-strip">
-      <div class="wrap hmi-strip__grid">
-        <div class="hmi-strip__item">
-          <i class="fa-solid fa-microchip"></i>
-          <div>
-            <h3>Siemens</h3>
-            <p>SIMATIC HMI Basic, Comfort &amp; Mobile panels.</p>
-          </div>
-        </div>
-        <div class="hmi-strip__item">
-          <i class="fa-solid fa-microchip"></i>
-          <div>
-            <h3>Allen-Bradley</h3>
-            <p>PanelView 5000, Plus, 800 terminals.</p>
-          </div>
-        </div>
-        <div class="hmi-strip__item">
-          <i class="fa-solid fa-microchip"></i>
-          <div>
-            <h3>ABB</h3>
-            <p>CP600-eCo, CP600 &amp; CP600-Pro control panels.</p>
-          </div>
-        </div>
-        <div class="hmi-strip__item">
-          <i class="fa-solid fa-microchip"></i>
-          <div>
-            <h3>Schneider Electric</h3>
-            <p>Harmony ST6, Magelis STO/STU, GTO, XBT ranges.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
+<!-- ==================== BRAND SUMMARY STRIP (LOGOS) ==================== -->
+<section id="brands" class="plc-brand-strip">
+  <div class="wrap plc-brand-strip__grid">
 
-    <!-- ==================== HMI FAMILIES (PLC-style cards with images) ==================== -->
+    <a class="plc-brand-pill" href="#siemens" aria-label="Siemens PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/4.avif' %}"
+           alt="Siemens">
+    </a>
+
+    <a class="plc-brand-pill" href="#allen-bradley" aria-label="Allen-Bradley PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/3.avif' %}"
+           alt="Allen-Bradley">
+    </a>
+
+    <a class="plc-brand-pill" href="#abb" aria-label="ABB PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/2.avif' %}"
+           alt="ABB">
+    </a>
+
+    <a class="plc-brand-pill" href="#schneider" aria-label="Schneider Electric PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/1.avif' %}"
+           alt="Schneider Electric">
+    </a>
+
+  </div>
+</section>
+
     <!-- ==================== HMI FAMILIES (PLC card design) ==================== -->
 <section id="brands" class="hmi-section hmi-families">
   <div class="wrap">
@@ -356,17 +353,10 @@ We support leading HMI platforms from Siemens, Allen-Bradley, ABB, and Schneider
           </p>
         </article>
       </div>
-
-      <p class="hmi-family__note">
-        Please submit your inquiry to download the detailed HMI product flyer.
-      </p>
     </section>
 
   </div>
 </section>
-
-
-
     <!-- ==================== CTA ==================== -->
     <section class="hmi-cta">
       <div class="wrap hmi-cta__wrap">

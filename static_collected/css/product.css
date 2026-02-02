@@ -1,0 +1,222 @@
+/* ========== Products Page Styles ========== */
+
+/* Hero / banner */
+:root {
+  --hero-height: clamp(420px, 70vh, 760px);
+  --hero-maxw: 1100px;
+  --text-light: #fff;
+}
+
+.neplan-electricity-slide {
+  position: relative;
+  min-height: var(--hero-height);
+  background-image: url('../images/product-banner.jpg'); /* update this */
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+}
+.neplan-electricity-slide::before {
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
+  pointer-events: none;
+}
+.nes-viewport {
+  position: relative;
+  min-height: var(--hero-height);
+  width: 100%;
+  margin: 0;
+  padding-inline: clamp(16px, 3vw, 32px);
+}
+.nsv-hero {
+  position: relative;
+  z-index: 1;
+  min-height: var(--hero-height);
+  max-width: var(--hero-maxw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(12px, 2vw, 20px);
+}
+.nsv-kicker {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.2);
+}
+.nsv-title {
+  margin: 0;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: .2px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: #fff;
+}
+.nsv-sub {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  line-height: 1.6;
+  color: #eef2f8;
+  max-width: 70ch;
+}
+
+/* Products section wrapper */
+.neplan-products-cards {
+  --bg: #ffffff;
+  --soft: #f7f9fb;
+  --text: #0e1b2b;
+  --muted: #5b6472;
+  --primary: #0f766e;
+  --primary-2: #155e75;
+  --shadow: 0 14px 32px rgba(2,8,23,.08), 0 4px 10px rgba(2,8,23,.04);
+
+  background: var(--bg);
+  color: var(--text);
+  padding: clamp(36px, 5vw, 64px) clamp(16px, 5vw, 56px);
+}
+
+.npc-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.npc-head {
+  text-align: center;
+  margin-bottom: clamp(24px, 4vw, 48px);
+}
+
+.npc-head h2 {
+  margin: 0 0 0.4rem;
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+}
+
+.npc-head .npc-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Grid of product cards */
+.npc-grid {
+  display: grid;
+  gap: clamp(18px, 2.5vw, 32px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Individual product card */
+.npc-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--soft);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 2.5vw, 32px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.npc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(2,8,23,.12), 0 6px 14px rgba(2,8,23,.06);
+}
+
+/* Accent background overlay per card */
+.npc-card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .6;
+  transition: opacity .3s ease;
+}
+
+.npc-card:hover .npc-card__bg {
+  opacity: .9;
+}
+
+.npc-card__icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+}
+
+.npc-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.npc-card__title {
+  margin: clamp(16px, 2vw, 20px) 0 0.5rem;
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.npc-card__text {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 1.2rem;
+  min-height: 3.6rem;
+}
+
+.npc-card__cta {
+  display: flex;
+}
+
+/* Button inside cards */
+.npc-btn {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  color: #fff;
+  transition: filter .2s ease, transform .2s ease;
+}
+
+.npc-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
+/* Reveal / scroll animation */
+.neplan-products-cards [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1);
+  transition-delay: var(--d, 0s);
+}
+.neplan-products-cards [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+/* Accent backgrounds (define as needed) */
+.npc-card__bg--plc    { background: radial-gradient(circle at top left, rgba(15,118,110,.15), transparent 60%); }
+.npc-card__bg--hmi    { background: radial-gradient(circle at top left, rgba(6,182,212,.15), transparent 60%); }
+.npc-card__bg--dcs    { background: radial-gradient(circle at top left, rgba(59,130,246,.15), transparent 60%); }
+.npc-card__bg--scada  { background: radial-gradient(circle at top left, rgba(245,158,11,.15), transparent 60%); }
+.npc-card__bg--custom { background: radial-gradient(circle at top left, rgba(168,85,247,.15), transparent 60%); }
+
+/* new ones */
+.npc-card__bg--vsd    { background: radial-gradient(circle at top left, rgba(34,197,94,.16), transparent 60%); }
+.npc-card__bg--iot    { background: radial-gradient(circle at top left, rgba(14,165,233,.16), transparent 60%); }
+
+/* Add page padding fix if you use sticky header */
+body {
+  margin-top: 5.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .nsv-title { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+  .npc-card { padding: clamp(18px, 3vw, 24px); }
+}

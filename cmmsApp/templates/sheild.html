@@ -103,39 +103,37 @@
       </div>
     </section>
 
-    <!-- ==================== BRAND SUMMARY STRIP ==================== -->
-    <section class="iot-strip">
-      <div class="wrap iot-strip__grid">
-        <div class="iot-strip__item">
-          <i class="fa-solid fa-microchip"></i>
-          <div>
-            <h3>Siemens SIMATIC IOT2000 / IOT2050</h3>
-            <p>Open, Linux-based industrial gateways for edge connectivity and data pre-processing.</p>
-          </div>
-        </div>
-        <div class="iot-strip__item">
-          <i class="fa-solid fa-cloud-arrow-up"></i>
-          <div>
-            <h3>MindSphere &amp; cloud platforms</h3>
-            <p>Secure connection of plant data to MindSphere or your preferred cloud environment.</p>
-          </div>
-        </div>
-        <div class="iot-strip__item">
-          <i class="fa-solid fa-network-wired"></i>
-          <div>
-            <h3>Schneider EcoStruxure</h3>
-            <p>EcoStruxure-ready controllers and gateways for energy and process visibility.</p>
-          </div>
-        </div>
-        <div class="iot-strip__item">
-          <i class="fa-solid fa-diagram-project"></i>
-          <div>
-            <h3>Allen-Bradley / Rockwell</h3>
-            <p>Integrated architectures for The Connected Enterprise with edge data access.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- ==================== BRAND SUMMARY STRIP (LOGOS) ==================== -->
+<section id="brands" class="plc-brand-strip">
+  <div class="wrap plc-brand-strip__grid">
+
+    <a class="plc-brand-pill" href="#siemens" aria-label="Siemens PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/4.avif' %}"
+           alt="Siemens">
+    </a>
+
+    <a class="plc-brand-pill" href="#abb" aria-label="ABB PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/8.png' %}"
+           alt="mindsphere">
+    </a>
+    <a class="plc-brand-pill" href="#allen-bradley" aria-label="Allen-Bradley PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/3.avif' %}"
+           alt="Allen-Bradley">
+    </a>
+
+    
+
+    <a class="plc-brand-pill" href="#schneider" aria-label="Schneider Electric PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/1.avif' %}"
+           alt="Schneider Electric">
+    </a>
+
+  </div>
+</section>
 
     <!-- ==================== IoT PLATFORMS (BIG PRODUCT CARDS) ==================== -->
     <section id="platforms" class="iot-section iot-platforms">
@@ -234,7 +232,7 @@
               </ul>
             </div>
             <figure class="iot-card__media">
-              <img src="{% static 'images/iot/rockwell-iot.jpg' %}"
+              <img src="{% static 'images/ALLEN-BRADLEYIOT.avif' %}"
                    alt="Allen-Bradley and Rockwell Automation IoT solutions">
             </figure>
           </article>

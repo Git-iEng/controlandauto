@@ -105,31 +105,38 @@
     </section>
 
     <!-- ==================== BRAND SUMMARY STRIP ==================== -->
-    <section class="scada-strip">
-      <div class="wrap scada-strip__grid">
-        <div class="scada-strip__item">
-          <i class="fa-solid fa-diagram-project"></i>
-          <div>
-            <h3>Siemens</h3>
-            <p>SIMATIC WinCC Professional SCADA solutions.</p>
-          </div>
-        </div>
-        <div class="scada-strip__item">
-          <i class="fa-solid fa-diagram-project"></i>
-          <div>
-            <h3>Schneider Electric</h3>
-            <p>Clear SCADA &amp; Citect SCADA platforms.</p>
-          </div>
-        </div>
-        <div class="scada-strip__item">
-          <i class="fa-solid fa-diagram-project"></i>
-          <div>
-            <h3>Allen-Bradley / WinTr</h3>
-            <p>WinTr SCADA systems with AB integration.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+     
+<!-- ==================== BRAND SUMMARY STRIP (LOGOS) ==================== -->
+<section id="brands" class="plc-brand-strip">
+  <div class="wrap plc-brand-strip__grid">
+
+    <a class="plc-brand-pill" href="#siemens" aria-label="Siemens PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/4.avif' %}"
+           alt="Siemens">
+    </a>
+
+    <a class="plc-brand-pill" href="#allen-bradley" aria-label="Allen-Bradley PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/3.avif' %}"
+           alt="Allen-Bradley">
+    </a>
+
+    {% comment %} <a class="plc-brand-pill" href="#abb" aria-label="ABB PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/2.avif' %}"
+           alt="ABB">
+    </a> {% endcomment %}
+
+    <a class="plc-brand-pill" href="#schneider" aria-label="Schneider Electric PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/1.avif' %}"
+           alt="Schneider Electric">
+    </a>
+
+  </div>
+</section>
+    
 
     <!-- ==================== SCADA PLATFORMS (BIG CARDS) ==================== -->
     <section id="platforms" class="scada-section scada-platforms">

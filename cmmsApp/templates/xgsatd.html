@@ -4,12 +4,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DCS – Distributed Control System | iEngineering</title>
+  <title>DCS – Distributed Control System</title>
   <link rel="icon" href="{% static 'images/logo1.png' %}">
 
-  <!-- Icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
   <!-- Page-specific CSS (ONLY for this DCS page) -->
   <link rel="stylesheet" href="{% static 'css/xgsatd.css' %}?v=1">
@@ -105,7 +103,7 @@
     </section>
 
     <!-- ==================== BRAND SUMMARY STRIP ==================== -->
-    <section class="dcs-strip">
+    {% comment %} <section class="dcs-strip">
       <div class="wrap dcs-strip__grid">
         <div class="dcs-strip__item">
           <i class="fa-solid fa-diagram-project"></i>
@@ -136,7 +134,38 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> {% endcomment %}
+
+<!-- ==================== BRAND SUMMARY STRIP (LOGOS) ==================== -->
+<section id="brands" class="plc-brand-strip">
+  <div class="wrap plc-brand-strip__grid">
+
+    <a class="plc-brand-pill" href="#siemens" aria-label="Siemens PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/4.avif' %}"
+           alt="Siemens">
+    </a>
+
+    <a class="plc-brand-pill" href="#allen-bradley" aria-label="Allen-Bradley PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/5.png' %}"
+           alt="Rockwell">
+    </a>
+
+    <a class="plc-brand-pill" href="#abb" aria-label="ABB PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/7.png' %}"
+           alt="yokogawa">
+    </a>
+
+    <a class="plc-brand-pill" href="#schneider" aria-label="Schneider Electric PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/6.png' %}"
+           alt="Honeywell">
+    </a>
+
+  </div>
+</section>
 
     <!-- ==================== DCS PLATFORMS (BIG PRODUCT CARDS) ==================== -->
     <section id="platforms" class="dcs-section dcs-platforms">
@@ -170,7 +199,7 @@
             </div>
             <figure class="dcs-card__media">
               <!-- 🔁 Replace with your actual PCS 7 image path -->
-              <img src="{% static 'images/dcs/siemens-pcs7.jpg' %}"
+              <img src="{% static 'images/dsc/SIMATIC.avif' %}"
                    alt="Siemens SIMATIC PCS 7 system">
             </figure>
           </article>
@@ -193,7 +222,7 @@
             </div>
             <figure class="dcs-card__media">
               <!-- 🔁 Replace with your actual Honeywell DCS image path -->
-              <img src="{% static 'images/dcs/honeywell-experion.jpg' %}"
+              <img src="{% static 'images/dsc/honeywellDCS.avif' %}"
                    alt="Honeywell Experion DCS">
             </figure>
           </article>
@@ -215,7 +244,7 @@
             </div>
             <figure class="dcs-card__media">
               <!-- 🔁 Replace with your actual Yokogawa CENTUM image path -->
-              <img src="{% static 'images/dcs/yokogawa-centum-vp.jpg' %}"
+              <img src="{% static 'images/dsc/Yokogawa.avif' %}"
                    alt="Yokogawa CENTUM VP DCS">
             </figure>
           </article>
@@ -238,7 +267,7 @@
             </div>
             <figure class="dcs-card__media">
               <!-- 🔁 Replace with your actual PlantPAx / FactoryTalk image path -->
-              <img src="{% static 'images/dcs/rockwell-plantpax.jpg' %}"
+              <img src="{% static 'images/dsc/rockwell.avif' %}"
                    alt="Rockwell PlantPAx DCS">
             </figure>
           </article>

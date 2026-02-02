@@ -105,38 +105,38 @@
     </section>
 
     <!-- ==================== BRAND SUMMARY STRIP ==================== -->
-    <section class="vsd-strip">
-      <div class="wrap vsd-strip__grid">
-        <div class="vsd-strip__item">
-          <i class="fa-solid fa-wave-square"></i>
-          <div>
-            <h3>Siemens SINAMICS</h3>
-            <p>G120E, G150, S120 CM and S150 enclosed variable speed drive systems.</p>
-          </div>
-        </div>
-        <div class="vsd-strip__item">
-          <i class="fa-solid fa-plug-circle-bolt"></i>
-          <div>
-            <h3>Allen-Bradley PowerFlex</h3>
-            <p>6000, 7000 and ArcShield arc-resistant medium voltage drives.</p>
-          </div>
-        </div>
-        <div class="vsd-strip__item">
-          <i class="fa-solid fa-industry"></i>
-          <div>
-            <h3>ABB Industrial Drives</h3>
-            <p>ACS800 &amp; ACS880 single drives, modules and liquid-cooled variants.</p>
-          </div>
-        </div>
-        <div class="vsd-strip__item">
-          <i class="fa-solid fa-bolt"></i>
-          <div>
-            <h3>Schneider Altivar</h3>
-            <p>Altivar Process ATV600/900, Altivar 1200 and Altivar 61/71 Plus.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
+<!-- ==================== BRAND SUMMARY STRIP (LOGOS) ==================== -->
+<section id="brands" class="plc-brand-strip">
+  <div class="wrap plc-brand-strip__grid">
+
+    <a class="plc-brand-pill" href="#siemens" aria-label="Siemens PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/4.avif' %}"
+           alt="Siemens">
+    </a>
+
+    <a class="plc-brand-pill" href="#allen-bradley" aria-label="Allen-Bradley PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/3.avif' %}"
+           alt="Allen-Bradley">
+    </a>
+
+    <a class="plc-brand-pill" href="#abb" aria-label="ABB PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/2.avif' %}"
+           alt="ABB">
+    </a>
+
+    <a class="plc-brand-pill" href="#schneider" aria-label="Schneider Electric PLC">
+      <img class="plc-brand-logo"
+           src="{% static 'images/logo/1.avif' %}"
+           alt="Schneider Electric">
+    </a>
+
+  </div>
+</section>
+
 
     <!-- ==================== VSD PLATFORMS (BIG PRODUCT CARDS) ==================== -->
     <section id="platforms" class="vsd-section vsd-platforms">
@@ -171,7 +171,7 @@
               </ul>
             </div>
             <figure class="vsd-card__media">
-              <img src="{% static 'images/controls/vsd/siemens-sinamics.jpg' %}"
+              <img src="{% static 'images/vsd/1.avif' %}"
                    alt="Siemens SINAMICS variable speed drives">
             </figure>
           </article>
@@ -193,7 +193,7 @@
               </ul>
             </div>
             <figure class="vsd-card__media">
-              <img src="{% static 'images/controls/vsd/ab-powerflex.jpg' %}"
+              <img src="{% static 'images/vsd/allenbradleypowerflex.avif' %}"
                    alt="Allen-Bradley PowerFlex medium voltage drives">
             </figure>
           </article>
@@ -216,7 +216,7 @@
               </ul>
             </div>
             <figure class="vsd-card__media">
-              <img src="{% static 'images/controls/vsd/abb-acs880.jpg' %}"
+              <img src="{% static 'images/vsd/ACS800.avif' %}"
                    alt="ABB ACS800 and ACS880 industrial drives">
             </figure>
           </article>
@@ -239,7 +239,7 @@
               </ul>
             </div>
             <figure class="vsd-card__media">
-              <img src="{% static 'images/controls/vsd/schneider-altivar.jpg' %}"
+              <img src="{% static 'images/vsd/schneider.avif' %}"
                    alt="Schneider Electric Altivar process and MV drives">
             </figure>
           </article>

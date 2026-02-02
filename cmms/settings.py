@@ -23,9 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tpzqxw&&@03wq2yzgf!gzh6u2=044s2j+_!#jioe(#f^6%quzo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "controlandautomation.ieng.tech",
+    ".ieng.tech",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 
 # Application definition
@@ -42,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -104,26 +110,26 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "static_collected"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Where to store the Excel (optional)
-CONTACT_SUBMISSIONS_XLSX = BASE_DIR / "contact_submissions.xlsx"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Email (configure to your provider)
 
@@ -135,6 +141,7 @@ EMAIL_USE_SSL = True  # Enable SSL for port 465
 EMAIL_HOST_USER = 'test@ieng.tech'  # Your email address
 EMAIL_HOST_PASSWORD = 'test@iEng'  # Your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_TIMEOUT = 15
 CONTACT_RECIPIENTS = [
     "shila@iengaust.com.au",
    "enquiries@iengaust.com.au",
@@ -148,9 +155,13 @@ DEMO_RECIPIENTS = CONTACT_RECIPIENTS
 
 # Who receives the notifications
 CONTACT_INBOX = CONTACT_RECIPIENTS[0]
-EMAIL_TIMEOUT = 15
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = [
+    "https://controlandautomation.ieng.tech",
+]
 
-CSRF_TRUSTED_ORIGINS = ["https://controlandautomation.ieng.tech"]
+SECURE_SSL_REDIRECT = False  # keep False if nginx handles redirect, set True if you want Django to force https
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True

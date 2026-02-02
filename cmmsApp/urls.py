@@ -46,7 +46,7 @@ path("sitemap.xml", views.sitemap, name="sitemap"),
 path('product/xgsfd/', views.xgsfd, name='xgsfd'),
 path('neplan-asset-management/', views.neplan_asset_management, name='neplan_asset_management'),
 
-path('product/sheilda/', views.sheilda, name='sheilda'),
+path('project/', views.sheilda, name='sheilda'),
     # contact section
     path('contact/', views.contact, name='contact'),
     path('neplan-gas-water-heating/contact/', views.contact, name='contact'),

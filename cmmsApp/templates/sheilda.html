@@ -1,0 +1,258 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project</title>
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{% static 'css/shield-a.css' %}?v=2">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <main class="iot-page">
+    <section class="iot-section iot-projects">
+      <div class="wrap">
+        <header class="iot-projects__head">
+          {% comment %} <h2 class="iot-section__title">Projects</h2> {% endcomment %}
+          {% comment %} <p class="iot-section__subtitle">
+            Practical upgrades delivered on operating plants, with a focus on reliability, safety and maintainability.
+          </p> {% endcomment %}
+        </header>
+
+        <!-- ==================== PROJECT 1 ==================== -->
+        <article class="iot-project">
+          <header class="iot-project__head">
+            <!-- Change 1: Center "Project 1" and put Fiji as highlighted tag at top-right -->
+            <div class="iot-project__topline">
+              <div class="iot-project__center">
+                <span class="iot-project__kickercenter">Project 1</span>
+              </div>
+              <div class="iot-project__country">
+                <span class="iot-countrytag"><i class="fa-solid fa-location-dot"></i> Fiji</span>
+              </div>
+            </div>
+
+            <h3 class="iot-project__title">Automation and DC Drive Upgrade</h3>
+            <p class="iot-project__summary">
+              Automation and DC drive modernisation for a rolling mill in Fiji. The obsolete drive and control system was upgraded while
+              retaining the existing motor, achieving stable current sharing, smoother operation, improved diagnostics and reduced downtime.
+            </p>
+          </header>
+
+          <div class="iot-project__layout">
+            <figure class="iot-project__hero">
+              <img
+                src="{% static 'images/comp.avif' %}"
+                alt="Rolling mill automation and DC drive upgrade"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="iot-project__divider" aria-hidden="true"></div>
+
+            <!-- Change 2: bigger thumbs -->
+            <div class="iot-project__thumbs" aria-label="Project 1 image gallery">
+              <a class="iot-thumb" href="#" aria-label="Project 1 image 1">
+                <img src="{% static 'images/pro/1.avif' %}" alt="DC drive cabinet" loading="lazy"/>
+              </a>
+              <a class="iot-thumb" href="#" aria-label="Project 1 image 2">
+                <img src="{% static 'images/pro/2.avif' %}" alt="PLC and control components" loading="lazy"/>
+              </a>
+              <a class="iot-thumb" href="#" aria-label="Project 1 image 3">
+                <img src="{% static 'images/pro/3.avif' %}" alt="Industrial automation wiring" loading="lazy"/>
+              </a>
+              <a class="iot-thumb" href="#" aria-label="Project 1 image 4">
+                <img src="{% static 'images/pro/4.avif' %}" alt="Drive integration and testing" loading="lazy"/>
+              </a>
+              <a class="iot-thumb" href="#" aria-label="Project 1 image 5">
+                <img src="{% static 'images/pro/5.avif' %}" alt="Encoder feedback and instrumentation" loading="lazy"/>
+              </a>
+              <a class="iot-thumb" href="#" aria-label="Project 1 image 6">
+                <img src="{% static 'images/pro/6.avif' %}" alt="Commissioning on site" loading="lazy"/>
+              </a>
+            </div>
+          </div>
+
+          <div class="iot-project__cols">
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-boxes-stacked"></i> Products supplied</h4>
+              <ul class="iot-list">
+                <li>Master–slave DC drive system</li>
+                <li>DC interposing chokes</li>
+                <li>Snubber networks with film capacitors</li>
+                <li>PLC hardware and control components</li>
+                <li>Encoder-based speed feedback system</li>
+                <li>Protection and safety components</li>
+              </ul>
+            </div>
+
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-screwdriver-wrench"></i> Services provided</h4>
+              <ul class="iot-list">
+                <li>System study and technical engineering</li>
+                <li>Automation and DC drive integration</li>
+                <li>PLC and drive configuration</li>
+                <li>Protection and safety implementation</li>
+                <li>Site support and commissioning</li>
+              </ul>
+            </div>
+
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-check-double"></i> Work executed</h4>
+              <ul class="iot-list">
+                <li>Upgraded obsolete DC drive and control system</li>
+                <li>Integrated modern automation while retaining the existing motor</li>
+                <li>Achieved stable current sharing and smooth operation</li>
+                <li>Improved reliability, safety and diagnostics</li>
+                <li>Reduced downtime and maintenance effort</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==================== PROJECT 2 (NO BIG IMAGE) ==================== -->
+        <article class="iot-project iot-project--alt">
+          <header class="iot-project__head">
+            <div class="iot-project__topline">
+              <div class="iot-project__center">
+                <span class="iot-project__kickercenter">Project 2</span>
+              </div>
+              <div class="iot-project__country">
+                <span class="iot-countrytag"><i class="fa-solid fa-location-dot"></i> Fiji</span>
+              </div>
+            </div>
+
+            <h3 class="iot-project__title">Supply of SCADA Level Spares to a Water Utility</h3>
+            <p class="iot-project__summary">
+              Supply of SCADA level spares and critical components for a water utility to support uptime, maintenance readiness and faster response during failures.
+            </p>
+          </header>
+
+          <!-- Change 3: thumbs-only layout -->
+          <div class="iot-project__layout iot-project__layout--thumbsonly">
+            <div class="iot-project__thumbs iot-project__thumbs--wide" aria-label="Project 2 image gallery">
+              <a class="iot-thumb" href="#" aria-label="Project 2 image 1"><img src="{% static 'images/pro/7.avif' %}" alt="Control room" loading="lazy"/></a>
+              <a class="iot-thumb" href="#" aria-label="Project 2 image 2"><img src="{% static 'images/pro/8.avif' %}" alt="SCADA dashboards" loading="lazy"/></a>
+              <a class="iot-thumb" href="#" aria-label="Project 2 image 3"><img src="{% static 'images/pro/9.avif' %}" alt="Instrumentation" loading="lazy"/></a>
+              <a class="iot-thumb" href="#" aria-label="Project 2 image 4"><img src="{% static 'images/pro/10.avif' %}" alt="PLC panel" loading="lazy"/></a>
+              <a class="iot-thumb" href="#" aria-label="Project 2 image 5"><img src="{% static 'images/pro/11.avif' %}" alt="Network integration" loading="lazy"/></a>
+              <a class="iot-thumb" href="#" aria-label="Project 2 image 6"><img src="{% static 'images/pro/12.avif' %}" alt="Site commissioning" loading="lazy"/></a>
+            </div>
+          </div>
+
+          {% comment %} <div class="iot-project__cols">
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-boxes-stacked"></i> Scope</h4>
+              <ul class="iot-list">
+                <li>PLC/SCADA upgrade planning and cutover</li>
+                <li>IO validation and loop checks</li>
+                <li>Alarm rationalisation and trending</li>
+              </ul>
+            </div>
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-shield-halved"></i> Outcome</h4>
+              <ul class="iot-list">
+                <li>Improved visibility and diagnostics</li>
+                <li>Reduced operator response time</li>
+                <li>Secure remote monitoring enabled</li>
+              </ul>
+            </div>
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-screwdriver-wrench"></i> Services</h4>
+              <ul class="iot-list">
+                <li>Engineering, configuration and testing</li>
+                <li>Commissioning support</li>
+                <li>As-built documentation handover</li>
+              </ul>
+            </div>
+          </div> {% endcomment %}
+        </article>
+
+        <!-- ==================== PROJECT 3 (NO BIG IMAGE) ==================== -->
+        <article class="iot-project">
+          <header class="iot-project__head">
+            <div class="iot-project__topline">
+              <div class="iot-project__center">
+                <span class="iot-project__kickercenter">Project 3</span>
+              </div>
+              <div class="iot-project__country">
+                <span class="iot-countrytag"><i class="fa-solid fa-location-dot"></i> Fiji</span>
+              </div>
+            </div>
+
+            <h3 class="iot-project__title">Supply of Danfoss VACON Variable Speed Drives for Utility Applications</h3>
+            <p class="iot-project__summary">
+              Supply of Danfoss VACON VSDs for utility applications, supporting reliable motor control, improved energy efficiency and simplified maintenance spares.
+            </p>
+
+<div class="iot-project__layout iot-project__layout--thumbsonly">
+  <!-- Only 2 images for Project 3 -->
+  <div class="iot-project__thumbs iot-project__thumbs--two" aria-label="Project 3 image gallery">
+    <a class="iot-thumb" href="#" aria-label="Project 3 image 1">
+      <!-- Replace with your real image path -->
+      <img src="{% static 'images/pro/14.avif' %}" alt="Danfoss VACON VSD - Image 1" loading="lazy"/>
+    </a>
+
+    <a class="iot-thumb" href="#" aria-label="Project 3 image 2">
+      <!-- Replace with your real image path -->
+      <img src="{% static 'images/pro/13.avif' %}" alt="Danfoss VACON VSD - Image 2" loading="lazy"/>
+    </a>
+  </div>
+</div>
+
+
+          {% comment %} <div class="iot-project__cols">
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-boxes-stacked"></i> Scope</h4>
+              <ul class="iot-list">
+                <li>Protection review and retrofit design</li>
+                <li>Drive diagnostics and health checks</li>
+                <li>Spare strategy and maintenance improvements</li>
+              </ul>
+            </div>
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-check-double"></i> Outcome</h4>
+              <ul class="iot-list">
+                <li>Safer operation and improved fault handling</li>
+                <li>Reduced nuisance trips</li>
+                <li>Lower downtime and maintenance effort</li>
+              </ul>
+            </div>
+            <div class="iot-project__box">
+              <h4><i class="fa-solid fa-screwdriver-wrench"></i> Services</h4>
+              <ul class="iot-list">
+                <li>Engineering and configuration</li>
+                <li>Commissioning support</li>
+                <li>Documentation handover</li>
+              </ul>
+            </div>
+          </div> {% endcomment %}
+        </article>
+
+      </div>
+    </section>
+
+    <section class="iot-cta">
+      <div class="wrap iot-cta__wrap">
+        <h2>Plan your next project with iEngineering</h2>
+        <p>
+          Share your existing control system architecture, critical assets and the KPIs you want to see.
+          We will recommend suitable IoT modules, gateways and platforms and outline a practical roadmap
+          from pilot to full-scale deployment.
+        </p>
+        <div class="iot-cta__buttons">
+          <a href="/contact/" class="iot-btn iot-btn--solid">Discuss an Project</a>
+          <a href="/product/" class="iot-btn iot-btn--ghost">Back to Controls &amp; Automation</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>
