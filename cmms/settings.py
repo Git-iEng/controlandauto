@@ -23,15 +23,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-tpzqxw&&@03wq2yzgf!gzh6u2=044s2j+_!#jioe(#f^6%quzo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    "controlandautomation.ieng.tech",
-    ".ieng.tech",
-]
+if DEBUG:
+    SECURE_SSL_REDIRECT = False
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+else:
+    SECURE_SSL_REDIRECT = True
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
 
+
+ALLOWED_HOSTS = ["controlandautomation.ieng.tech", ".ieng.tech"]
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
+CSRF_TRUSTED_ORIGINS = ["https://*.ieng.tech"]
 
 # Application definition
 
@@ -46,14 +53,15 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-     "whitenoise.middleware.WhiteNoiseMiddleware",
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+   "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 ROOT_URLCONF = 'cmms.urls'
@@ -110,26 +118,30 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
 TIME_ZONE = 'UTC'
+
 USE_I18N = True
+
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / "static_collected"
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "static_collected" 
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Where to store the Excel (optional)
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # Email (configure to your provider)
 
@@ -141,13 +153,12 @@ EMAIL_USE_SSL = True  # Enable SSL for port 465
 EMAIL_HOST_USER = 'test@ieng.tech'  # Your email address
 EMAIL_HOST_PASSWORD = 'test@iEng'  # Your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_TIMEOUT = 15
 CONTACT_RECIPIENTS = [
     "shila@iengaust.com.au",
    "enquiries@iengaust.com.au",
-   "test@ieng.tech"
+   "test@ieng.tech",
 ]
-CONTACT_RECIPIENTS = ["shila@iengaust.com.au","enquiries@iengaust.com.au","test@ieng.tech"]
+CONTACT_RECIPIENTS = ["shila@iengaust.com.au","enquiries@iengaust.com.au", "test@ieng.tech"]
 DEMO_RECIPIENTS = CONTACT_RECIPIENTS
 
 # CONTACT_EMAIL = 'diksha@iengaust.com.au'
@@ -155,13 +166,7 @@ DEMO_RECIPIENTS = CONTACT_RECIPIENTS
 
 # Who receives the notifications
 CONTACT_INBOX = CONTACT_RECIPIENTS[0]
-
+EMAIL_TIMEOUT = 15
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
-CSRF_TRUSTED_ORIGINS = [
-    "https://controlandautomation.ieng.tech",
-]
-
-SECURE_SSL_REDIRECT = False  # keep False if nginx handles redirect, set True if you want Django to force https
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
