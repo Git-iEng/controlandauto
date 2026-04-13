@@ -15,27 +15,34 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
-  <!-- Google Tag Manager -->
+
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
 <!-- End Google Tag Manager -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
-
 <body>
   {% include 'header.html' %}
 
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Google Tag Manager -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+height="0" width="0" style="display:none;visibility:hidden">
+</iframe>
+</noscript>
+
 <!-- End Google Tag Manager (noscript) -->
   <!-- Contact Us – Hero -->
   <section class="neplan-contact-us-hero"
            style="--banner: url('/static/img/contact-hero.jpg');">
     <div class="neplan-contact-us-shell">
-      <h1 class="neplan-contact-us-title">Contact Us</h1>
+      <h1 class="neplan-contact-us-title">
+        Contact Us
+      </h1>
     </div>
   </section>
 
@@ -72,10 +79,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="neplan-call-us-anytime__icon">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 21s7-7 7-11.2A7 7 0 0 0 5 9.8C5 14 12 21 12 21z"
-                  fill="none" stroke="currentColor" stroke-width="1.8"
+                  fill="none" 
+                  stroke="currentColor" 
+                  stroke-width="1.8"
                   stroke-linejoin="round"/>
             <circle cx="12" cy="9.8" r="2.4"
-                    fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="1.8"/>
           </svg>
         </div>
         <h3 class="neplan-call-us-anytime__title">Our Location</h3>

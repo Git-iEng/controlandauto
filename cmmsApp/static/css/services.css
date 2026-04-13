@@ -10,7 +10,7 @@
 .neplan-electricity-slide{
   position: relative;
   min-height: var(--hero-height);
-  background-image: url('../images/services/control-hero.avif'); /* update this image path */
+  background-image: url('../static/images/banner/contact.png'); /* update this image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
