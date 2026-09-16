@@ -1,56 +1,84 @@
-# In iEngApp/urls.py
 from django.urls import path
 from . import views
-from .views import contact_section
+
 app_name = 'cmmsApp'
-from .views import request_demo_view
 
 urlpatterns = [
-      path("request-demo/", views.request_demo_view, name="request_demo"),
-    # path("contact-thanks/", views.thanks_view, name="contact_thanks"),  # if you add a separate thanks view for demo
+    # Home
     path('', views.home, name='home'),
 
-    path('', views.home, name='home'),
+    # Demo form submit
+    path('request-demo/', views.request_demo_view, name='request_demo'),
+
+    # =========================================================
+    # CHANGE BY diptee - 10-Sep-2026
+    # EMAIL OTP VERIFICATION - START
+    # =========================================================
+    path(
+        'api/contact/send-email-otp/',
+        views.send_email_otp,
+        name='send_email_otp'
+    ),
+    path(
+        'api/contact/verify-email-otp/',
+        views.verify_email_otp,
+        name='verify_email_otp'
+    ),
+    # =========================================================
+    # CHANGE BY diptee - EMAIL OTP VERIFICATION - END
+    # =========================================================
+
+    # Main pages
     path('about/', views.about, name='about'),
-   
-
-    # path('contact/', views.contact, name='contact'),
-    # path("contacts/", views.contact_section, name="contact_section"),
-path("product/", views.product, name="product"),
-   path("contact/", views.contact, name="contact"),
-    path('about/', views.about, name='about'),
-    # path('contacts/', views.contact_section, name='contact_section'),
-    path('contact/thanks/', views.contact_thanks, name='contact_thanks'),
-    
-    # More URLs
-     # --- NEW: consulting block form + helper ---
-    path("contact/submit/", views.contact_block_submit, name="contact_submit"),
-    path("contact/phone-info/", views.phone_info, name="phone_info"),
-    path('plc/', views.gsa, name='gsa'),
-
-
-     path('hmi/', views.gsafd, name='gsafd'),
-
-     path('product/neplan-electricity/', views.neplan_electricity, name='neplan-electricity'),
-     path('product/gsafd/', views.gsafd, name='gsafd'),
-    path("contact/country-list/", views.country_list, name="country_list"),
-path('scada/', views.xgsfd, name='xgsfd'),
-path('services/', views.services, name='services'),
-# path('neplan-additional-solutions/', views.neplan_additional_solutions, name='neplan_additional_solutions'),
-
-path('vsd/', views.nets, name='nets'),
-path('dcs/', views.xgsatd, name='xgsatd'),
-path('iot/', views.sheild, name='sheild'),
-path("sitemap.xml", views.sitemap, name="sitemap"),
-
-path('product/xgsfd/', views.xgsfd, name='xgsfd'),
-path('neplan-asset-management/', views.neplan_asset_management, name='neplan_asset_management'),
-
-path('project/', views.sheilda, name='sheilda'),
-    # contact section
+    path('product/', views.product, name='product'),
     path('contact/', views.contact, name='contact'),
-    path('neplan-gas-water-heating/contact/', views.contact, name='contact'),
-    path('neplan-anywhere/contact/', views.contact, name='contact'),
-      # path('neplan-additional-solutions/contact/', views.contact, name='contact'),
+    path('services/', views.services, name='services'),
 
+    # Contact form
+    path('contact/thanks/', views.contact_thanks, name='contact_thanks'),
+    path('contact/submit/', views.contact_block_submit, name='contact_submit'),
+    path('contact/phone-info/', views.phone_info, name='phone_info'),
+    path('contact/country-list/', views.country_list, name='country_list'),
+
+    # Control and Automation pages
+    path('plc/', views.gsa, name='gsa'),
+    path('hmi/', views.gsafd, name='gsafd'),
+    path('scada/', views.xgsfd, name='xgsfd'),
+    path('vsd/', views.nets, name='nets'),
+    path('dcs/', views.xgsatd, name='xgsatd'),
+    path('iot/', views.sheild, name='sheild'),
+    path('project/', views.sheilda, name='sheilda'),
+
+    # Product / NEPLAN pages
+    # Updated by Diptee on 16-Sep-2026: START
+    # Disabled because views.py currently has no neplan_electricity() view.
+    # path(
+    #     'product/neplan-electricity/',
+    #     views.neplan_electricity,
+    #     name='neplan-electricity'
+    # ),
+    # Updated by Diptee on 16-Sep-2026: END
+
+    path('product/gsafd/', views.gsafd, name='gsafd'),
+    path('product/xgsfd/', views.xgsfd, name='xgsfd'),
+    path(
+        'neplan-asset-management/',
+        views.neplan_asset_management,
+        name='neplan_asset_management'
+    ),
+
+    # Existing NEPLAN contact aliases
+    path(
+        'neplan-gas-water-heating/contact/',
+        views.contact,
+        name='neplan_gas_water_heating_contact'
+    ),
+    path(
+        'neplan-anywhere/contact/',
+        views.contact,
+        name='neplan_anywhere_contact'
+    ),
+
+    # Sitemap
+    path('sitemap.xml', views.sitemap, name='sitemap'),
 ]
